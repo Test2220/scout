@@ -32,4 +32,4 @@ The guide linked below helped us create the client to create QR codes.
 https://medium.com/geekculture/few-ways-to-generate-qr-code-using-javascript-54b6b5220c4f
 
 The guide linked below helped us create the coordinator to scan QR codes.
-
+https://www.geeksforgeeks.org/create-a-qr-code-scanner-or-reader-in-html-css-javascript/
