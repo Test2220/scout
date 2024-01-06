@@ -124,3 +124,60 @@
     left: 0;
     z-index: 999;
   }/*# sourceMappingURL=styles.css.map */
+
+
+  /* style.css file*/
+body {
+
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	box-sizing: border-box;
+	text-align: center;
+	background: rgb(255, 255, 255);
+}
+.container {
+	max-width: 500px;
+	margin: auto;
+    padding-bottom: 20px;
+}
+
+.container h1 {
+	color: #ffffff;
+}
+
+.section {
+	background-color: #ffffff;
+	padding: 50px 30px;
+	border: 1.5px solid #b2b2b2;
+	border-radius: 0.25em;
+}
+
+#my-qr-reader {
+	padding: 20px !important;
+	border: 1.5px solid #b2b2b2 !important;
+	border-radius: 8px;
+}
+
+#my-qr-reader img[alt="Info icon"] {
+	display: none;
+}
+
+#my-qr-reader img[alt="Camera based scan"] {
+	width: 100px !important;
+	height: 100px !important;
+}
+
+
+
+#html5-qrcode-anchor-scan-type-change {
+	text-decoration: none !important;
+	color: #1d9bf0;
+}
+
+video {
+	width: 100% !important;
+	border: 1px solid #b2b2b2 !important;
+	border-radius: 0.25em;
+}
