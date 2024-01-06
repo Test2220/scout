@@ -5,14 +5,14 @@ This README file will give you a rough understanding as to how the site works an
 
 There are 2 pages in the scouting site that are used for gathering and reading data.
 
-## https://test2220.github.io/scout-client
+## https://test2220.github.io/scouter
 
 
 This page is used for collecting data from matches. After each match, finalize the data from that match and press the 'Submit' button at the bottom of the page.
 
 A QR code will be generated and can be scanned by a scouting coordinator using their device.
 
-## https://test2220.github.io/scout-reader
+## https://test2220.github.io/coordinator
 
 
 This page is used to scan QR codes that are created on the scout-client page.
