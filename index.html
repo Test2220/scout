@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="globals.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="./scroll-indicator.js" defer></script> 
+    <script src="./index.js"  type="module" defer></script>
+    <script src="./button.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>    <body>
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
+       
+        <h1>Scout 2220</h1>
+        <h2>Team #</h2>
+        <div>
+            <input placeholder="0000" name="team_num" title="Team #" maxlength=4>
+        </div>
+        <div>
+            <h1>Auto</h1>
+            <div>
+                <div>
+                <h2>Speaker notes scored</h2>
+                <button id="minus" name="field1">-</button>
+                <input placeholder="0" id="field1"></input>
+                <button id="plus" name="field1">+</button>
+            </div>
+            <div>
+                <div>
+                <h2>AMP notes scored</h2>
+                <button id="minus" name="field2">-</button>
+                <input placeholder="0" id="field2"></input>
+                <button id="plus" name="field2">+</button>
+            </div>
+
+            <div>
+                <div>
+                <h2>Left starting area</h2> 
+                <input type="checkbox" style="vertical-align:middle"></input> 
+            </div>
+        </div>
+        <div>
+            <h1>Tele Op</h1>
+            <div>
+                <div>
+                <h2>Speaker notes scored</h2>
+                <button id="minus" name="field3">-</button>
+                <input placeholder="0" id="field3"></input>
+                <button id="plus" name="field3">+</button>
+            </div>
+            <div>
+                <div>
+                <h2>AMP notes scored</h2>
+                <button id="minus" name="field4">-</button>
+                <input placeholder="0" id="field4"></input>
+                <button id="plus" name="field4">+</button>
+            </div>
+            <div>
+                <div>
+                <h2>On stage</h2> 
+                <input type="checkbox"></input> 
+            </div>
+            <div>
+                <div>
+                <h2>Trap note scored</h2> 
+                <input type="checkbox"></input> 
+            </div>
+            
+        </div>
+        <div>
+            <h1>Additional Notes</h1>
+            <textarea placeholder="Type any additional notes here" style="font-size:35px;" rows=5" cols="45"></textarea>
+            <div>
+                <button id="endOfForm">Submit</button>    
+            </div>
+            <canvas id="qrcode-2"></canvas>
+            <h3>Do not clear or submit the form again until the QR code has been scanned</h3>
+
+            <div>
+                <button id="clearForm">Clear form</button>
+            </div> 
+        </div>
+    </body>
+</html>
