@@ -1,0 +1,128 @@
+* {
+    font-family: "Varela Round", sans-serif;
+  }
+  
+  button {
+  
+    cursor: pointer;
+    background-color: rgb(0, 106, 255);
+    border-radius: 80px;
+    position: relative;
+    margin-bottom: 1.5rem;
+    margin-right: 1.2rem;
+    margin-left: 1.2rem;
+    font-size: 3rem;
+    padding: 0.25em 1em;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
+  
+  canvas {
+    margin-bottom: 1.5rem;
+    padding: 0.25em 1em;
+  
+  }
+  
+  h1 {
+    color: black;
+  }
+  h2 {
+    color: black;
+  }h1 {
+    color: black;
+  }
+  h4 {
+    color: black;
+  }
+  h3 {
+    color: black;
+  }
+  
+  input[type=checkbox] {
+    transform: scale(3);
+  
+  }
+  
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #dfdfdf;
+    transition: 0.4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+  }
+  
+  input:checked + .slider {
+    background-color: rgb(0, 106, 255);
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+  input {
+    height: 1rem;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 13px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: rgb(255, 255, 255);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(#a8a8a8, #a8a8a8);
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(#a8a8a8, #a8a8a8);
+  }
+  ::-webkit-scrollbar-thumb:active {
+    background: linear-gradient(#a8a8a8, #a8a8a8);
+  }
+  
+  .progress-container {
+    width: 100%;
+    height: 10px;
+    background: rgb(215, 215, 215);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+  }
+  .progress-container .progress-bar {
+    height: 10px;
+    border-radius: 10px;
+    background: linear-gradient(#0080ff, #0080ff);
+    width: 0%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+  }/*# sourceMappingURL=styles.css.map */
