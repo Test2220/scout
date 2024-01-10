@@ -31,6 +31,7 @@ function submitResults(event) {
     
     if (isArray(savedResults)) {
         console.log("array is array")
+        console.log(JSON.stringify(results))
         savedResults.push(results);
         localStorage.setItem("Saved-Results", savedResults);
     } else {

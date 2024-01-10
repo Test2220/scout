@@ -26,15 +26,14 @@ domReady(function () {
 			decoded = decodeText
 
 			decodeText = JSON.parse(decodeText)
-			console.log(decodeText)
 
-			// if (isArray(savedResults)) {
-			// 	console.log("array is array")
-			// 	savedResults.push(results);
-			// 	localStorage.setItem("Saved-Scanned", savedResults);
-			// } else {
-			// 	console.log("array is not array")
-			// }
+			if (isArray(decodeText)) {
+				console.log("array is array")
+				savedResults.push(decodeText);
+				localStorage.setItem("Saved-Scanned", savedResults);
+			} else {
+				console.log("array is not array")
+			}
 			
 		}
     }
@@ -47,7 +46,12 @@ domReady(function () {
 });
 
 function Export() {
-    console.log("Export")
+	let data = localStorage.getItem("Saved-Scanned")
+	
+	for (i = 0; max = data.length, i < max; i++) {
+		let keys = Object.keys(data[i])
+		console.log(keys)
+	}
 }
 
 document.getElementById("Export").addEventListener('click', Export);
