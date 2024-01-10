@@ -24,28 +24,8 @@ domReady(function () {
          //    alert("You Qr is : " + decodeText, decodeResult);
         if (decodeText !== decoded) {
 			decoded = decodeText
-
-			let params = [
-				"Team #", "Auto speaker notes scored", "Auto AMP notes scored",
-				"Left area during auto", "Teleop speaker notes scored",
-				"Teleop AMP notes scored", "On stage", "Trap note scored",
-				"Additional notes"
-			]
-
-			decodeText = decodeText.split(",")
-
-			let json = []
-
-			for (i = 0; max = decodeText.length, i < max; i++) {
-				json.push(params[i])
-				json.push(decodeText[i])
-			}
-
-			json = JSON.stringify(json)
-
-			json = { json }
+			console.log(decodeText)
 			
-			console.log(json)
 
 			// if (isArray(savedResults)) {
 			// 	console.log("array is array")
