@@ -24,8 +24,9 @@ domReady(function () {
          //    alert("You Qr is : " + decodeText, decodeResult);
         if (decodeText !== decoded) {
 			decoded = decodeText
+
+			decodeText = JSON.parse(decodeText)
 			console.log(decodeText)
-			
 
 			// if (isArray(savedResults)) {
 			// 	console.log("array is array")
