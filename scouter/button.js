@@ -43,10 +43,10 @@ function loaded() {
     for (let i = 0, max = all.length; i < max; i++) {
         if (all[i].id === "plus") {
             all[i].addEventListener("click", plus);
-            all[i].value = "0";
+            all[i].value = 0;
         } else if (all[i].id === "minus") {
             all[i].addEventListener("click", minus);
-            all[i].value = "0";
+            all[i].value = 0;
         }
     }
 }

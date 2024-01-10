@@ -13,36 +13,36 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <title>Scouter</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>    <body>
-        <div class="progress-container">
+        <!-- <div class="progress-container">
             <div class="progress-bar" id="myBar"></div>
-        </div>
+        </div> -->
        
         <h1>Scouter</h1>
         <h2>Team #</h2>
         <div>
-            <input placeholder="0000" name="team_num" title="Team #" maxlength=4>
+            <input placeholder="0000" name="team_num" title="Team #" maxlength=4 id="teamNumber">
         </div>
         <div>
             <h1>Auto</h1>
             <div>
                 <div>
                 <h2>Speaker notes scored</h2>
-                <button id="minus" name="field1">-</button>
-                <input placeholder="0" id="field1"></input>
-                <button id="plus" name="field1">+</button>
+                <button id="minus" name="speakerNotesScoredAuto">-</button>
+                <input placeholder="0" id="speakerNotesScoredAuto"></input>
+                <button id="plus" name="speakerNotesScoredAuto">+</button>
             </div>
             <div>
                 <div>
                 <h2>AMP notes scored</h2>
-                <button id="minus" name="field2">-</button>
-                <input placeholder="0" id="field2"></input>
-                <button id="plus" name="field2">+</button>
+                <button id="minus" name="ampNotesScoredAuto">-</button>
+                <input placeholder="0" id="ampNotesScoredAuto"></input>
+                <button id="plus" name="ampNotesScoredAuto">+</button>
             </div>
 
             <div>
                 <div>
                 <h2>Left starting area</h2> 
-                <input type="checkbox" style="vertical-align:middle"></input> 
+                <input id="leftStartingArea" type="checkbox" style="vertical-align:middle"></input> 
             </div>
         </div>
         <div>
@@ -50,32 +50,33 @@
             <div>
                 <div>
                 <h2>Speaker notes scored</h2>
-                <button id="minus" name="field3">-</button>
-                <input placeholder="0" id="field3"></input>
-                <button id="plus" name="field3">+</button>
+                <button id="minus" name="speakerNotesScoredTeleop">-</button>
+                <input placeholder="0" id="speakerNotesScoredTeleop"></input>
+                <button id="plus" name="speakerNotesScoredTeleop">+</button>
             </div>
             <div>
                 <div>
                 <h2>AMP notes scored</h2>
-                <button id="minus" name="field4">-</button>
-                <input placeholder="0" id="field4"></input>
-                <button id="plus" name="field4">+</button>
+                <button id="minus" name="ampNotesScoredTeleop">-</button>
+                <input placeholder="0" id="ampNotesScoredTeleop"></input>
+                <button id="plus" name="ampNotesScoredTeleop">+</button>
             </div>
             <div>
                 <div>
                 <h2>On stage</h2> 
-                <input type="checkbox"></input> 
+                <input id="onStage" type="checkbox"></input> 
             </div>
             <div>
                 <div>
                 <h2>Trap note scored</h2> 
-                <input type="checkbox"></input> 
+                <input id="trapNotesScored" type="checkbox"></input> 
             </div>
             
         </div>
         <div>
             <h1>Additional Notes</h1>
-            <textarea placeholder="Type any additional notes here" style="font-size:35px;" rows=5" cols="45"></textarea>
+            <h3>Capped at 100 characters to make QR code readable</h3>
+            <textarea id="Notes" maxlength=100 placeholder="Type any additional notes here" style="font-size:35px;" rows=5" cols="45"></textarea>
             <div>
                 <button id="endOfForm">Submit</button>    
             </div>
@@ -86,7 +87,7 @@
                 <button id="clearForm">Clear form</button>
             </div> 
             <div>
-                <button onclick="window.location.href='..'">Stop scouting</button>
+                <button onclick="window.location.href='..'">Stop</button>
             </div>
         </div>
     </body>

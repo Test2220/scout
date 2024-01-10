@@ -1,7 +1,7 @@
 
 
 let savedResults = [];
-localStorage.removeItem("Saved-Results");
+// localStorage.removeItem("Saved-Results");
 
 let oldData = localStorage.getItem("Saved-Results")
 if (oldData) {
@@ -15,27 +15,19 @@ function isArray(myArray) {
 function submitResults(event) {
     let all = document.getElementsByTagName("*");
     let inputs = [];
-    let results = [];
+    let results = {};
 
     for (let i=0, max=all.length; i < max; i++) {
-        if (all[i].nodeName === "INPUT") {
+        if (all[i].nodeName === "INPUT" || all[i].nodeName === "TEXTAREA") {
             inputs.push(all[i]);
         }
-    }
-
-    for (let i=0, max=all.length; i < max; i++) {
-        if (all[i].nodeName === "TEXTAREA") {
-            inputs.push(all[i]);
-        }
-    }
-
-    
+    } 
 
     for (let i = 0, max = inputs.length; i < max; i++) {
-        results.push(inputs[i].value);
+        results[inputs[i].id] = inputs[i].value;
     }
   
-    console.log(toString(results))
+    console.log(results)
     generateQRCode(results)
     
     if (isArray(savedResults)) {
