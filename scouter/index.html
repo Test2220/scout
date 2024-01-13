@@ -20,213 +20,216 @@
         </div> -->
 
     <h1>Scouter</h1>
-    <div class="section">
-        <h1 id="preMatch">Pre-Match</h1>
-        <h2>Match #</h2>
-        <div>
-            <input placeholder="000" name="match number" title="Match #" maxlength=3 id="Match number">
-        </div>
-        <h2>Scouter Initials</h2>
-        <div>
-            <input placeholder="ASP" name="scouter_initials" title="Scouter Initials" maxlength=3 id="scouterInitials">
-        </div>
+    <div class="scouter">
+        <div class="section">
+            <h1 id="preMatch">Pre-Match</h1>
+            <h2>Match #</h2>
+            <div>
+                <input placeholder="000" name="match number" title="Match #" maxlength=3 id="Match number">
+            </div>
+            <h2>Scouter Initials</h2>
+            <div>
+                <input placeholder="ASP" name="scouter_initials" title="Scouter Initials" maxlength=3
+                    id="scouterInitials">
+            </div>
 
-        <h2>Team #</h2>
-        <div>
-            <input placeholder="0000" name="team_number" title="Team #" maxlength=4 id="teamNumber">
+            <h2>Team #</h2>
+            <div>
+                <input placeholder="0000" name="team_number" title="Team #" maxlength=4 id="teamNumber">
+            </div>
+            <div>
+                <h2>Human Player at AMP</h2>
+                <input id="humanPlayerAtAmp" type="checkbox"></input>
+            </div>
         </div>
-        <div>
-            <h2>Human Player at AMP</h2>
-            <input id="humanPlayerAtAmp" type="checkbox"></input>
+        <div class="section">
+            <h1 id="Auto">Auto</h1>
+            <div>
+                <h2>Speaker notes scored</h2>
+                <button id="minus" name="speakerNotesScoredAuto">-</button>
+                <input placeholder="0" id="speakerNotesScoredAuto"></input>
+                <button id="plus" name="speakerNotesScoredAuto">+</button>
+            </div>
+            <div>
+                <h2>Speaker notes missed</h2>
+                <button id="minus" name="speakerNotesMissedAuto">-</button>
+                <input placeholder="0" id="speakerNotesMissedAuto"></input>
+                <button id="plus" name="speakerNotesMissedAuto">+</button>
+            </div>
+            <div>
+                <div>
+                    <h2>AMP notes scored</h2>
+                    <button id="minus" name="ampNotesScoredAuto">-</button>
+                    <input placeholder="0" id="ampNotesScoredAuto"></input>
+                    <button id="plus" name="ampNotesScoredAuto">+</button>
+                </div>
+                <div>
+                    <h2>AMP notes missed</h2>
+                    <button id="minus" name="ampNotesMissedAuto">-</button>
+                    <input placeholder="0" id="ampNotesMissedAuto"></input>
+                    <button id="plus" name="ampNotesMissedAuto">+</button>
+                </div>
+
+                <div>
+                    <div>
+                        <h2>Left starting area</h2>
+                        <input id="leftStartingArea" type="checkbox" style="vertical-align:middle"></input>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h2>Auto foul</h2>
+                        <input id="autoFoul" type="checkbox" style="vertical-align:middle"></input>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="section">
-        <h1 id="Auto">Auto</h1>
-        <div>
-            <h2>Speaker notes scored</h2>
-            <button id="minus" name="speakerNotesScoredAuto">-</button>
-            <input placeholder="0" id="speakerNotesScoredAuto"></input>
-            <button id="plus" name="speakerNotesScoredAuto">+</button>
-        </div>
-        <div>
-            <h2>Speaker notes missed</h2>
-            <button id="minus" name="speakerNotesMissedAuto">-</button>
-            <input placeholder="0" id="speakerNotesMissedAuto"></input>
-            <button id="plus" name="speakerNotesMissedAuto">+</button>
-        </div>
-        <div>
+        <div class="section">
+            <h1 id="teleOp">Tele Op</h1>
+            <div>
+                <h2>Speaker notes scored</h2>
+                <button id="minus" name="speakerNotesScoredTeleop">-</button>
+                <input placeholder="0" id="speakerNotesScoredTeleop"></input>
+                <button id="plus" name="speakerNotesScoredTeleop">+</button>
+            </div>
+            <div>
+                <h2>Speaker notes missed</h2>
+                <button id="minus" name="speakerNotesMissedTeleop">-</button>
+                <input placeholder="0" id="speakerNotesMissedTeleop"></input>
+                <button id="plus" name="speakerNotesMissedTeleop">+</button>
+            </div>
+
             <div>
                 <h2>AMP notes scored</h2>
-                <button id="minus" name="ampNotesScoredAuto">-</button>
-                <input placeholder="0" id="ampNotesScoredAuto"></input>
-                <button id="plus" name="ampNotesScoredAuto">+</button>
+                <button id="minus" name="ampNotesScoredTeleop">-</button>
+                <input placeholder="0" id="ampNotesScoredTeleop"></input>
+                <button id="plus" name="ampNotesScoredTeleop">+</button>
             </div>
             <div>
                 <h2>AMP notes missed</h2>
-                <button id="minus" name="ampNotesMissedAuto">-</button>
-                <input placeholder="0" id="ampNotesMissedAuto"></input>
-                <button id="plus" name="ampNotesMissedAuto">+</button>
+                <button id="minus" name="ampNotesMissedTeleop">-</button>
+                <input placeholder="0" id="ampNotesMissedTeleop"></input>
+                <button id="plus" name="ampNotesMissedTeleop">+</button>
             </div>
+            <h2>Note Pickup Location</h2>
+            <label for="notePickupLocation">Note Pickup Location</label>
 
+            <select name="notePickupLocation" id="notePickupLocation">
+                <option value="none">None</option>
+                <option value="ground">Ground</option>
+                <option value="manuallySet">Manually Set</option>
+                <option value="both">Both</option>
+            </select>
             <div>
                 <div>
-                    <h2>Left starting area</h2>
-                    <input id="leftStartingArea" type="checkbox" style="vertical-align:middle"></input>
+                    <h2>Coopertition</h2>
+                    <input id="coopertition" type="checkbox" style="vertical-align:middle"></input>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h1 id="endgame">Endgame</h1>
+
+
+            <div>
+                <h2>Trap note scored</h2>
+                <input id="trapNotesScored" type="checkbox"></input>
+            </div>
+            <h2>End Position</h2>
+            <label for="endPosition">End Position</label>
+
+            <select name="endPosition" id="endPosition">
+                <option value="noClimb">No Climb</option>
+                <option value="parked">Parked</option>
+                <option value="onstage">Onstage</option>
+                <option value="spotlit">Spotlit</option>
+            </select>
+            <h2>Harmony</h2>
+            <label for="harmony">Harmony</label>
+
+            <select name="harmony" id="harmony">
+                <option value="none">None</option>
+                <option value="firstOnChain">1st on Chain</option>
+                <option value="secondOnChain">2nd on Chain</option>
+                <option value="thirdOnChain">3rd on Chain</option>
+            </select>
+            <h2>High Note</h2>
+            <label for="highNote">High Note</label>
+
+            <select name="highNote" id="highNote">
+                <option value="none">None</option>
+                <option value="firstOnChain">1st on Chain</option>
+                <option value="secondOnChain">2nd on Chain</option>
+                <option value="thirdOnChain">3rd on Chain</option>
+            </select>
+            <h1 id="postmatch">Postmatch</h1>
+            <div>
+                <div>
+                    <h2>Yellow Card</h2>
+                    <input id="yellowCard" type="checkbox"></input>
                 </div>
             </div>
             <div>
                 <div>
-                    <h2>Auto foul</h2>
-                    <input id="autoFoul" type="checkbox" style="vertical-align:middle"></input>
+                    <h2>Red Card</h2>
+                    <input id="redCard" type="checkbox"></input>
+                </div>
+            </div>
+            <h2>Offense skill</h2>
+            <label for="offenseSkill">Offense skill</label>
+
+            <select name="offenseSkill" id="offenseSkill">
+                <option value="bad">Bad</option>
+                <option value="mid">Mid</option>
+                <option value="good">Good</option>
+                <option value="notObserved">Not Observed</option>
+            </select>
+            <h2>Defense skill</h2>
+            <label for="defenseSkill">Defense skill</label>
+
+            <select name="defenseSkill" id="defenseSkill">
+                <option value="bad">Bad</option>
+                <option value="mid">Mid</option>
+                <option value="good">Good</option>
+                <option value="notObserved">Not Observed</option>
+            </select>
+            <div>
+                <h2>Amount of fouls</h2>
+                <button id="minus" name="amountOfFouls">-</button>
+                <input placeholder="0" id="amountOfFouls"></input>
+                <button id="plus" name="amountOfFouls">+</button>
+            </div>
+            <div>
+                <div>
+                    <h2>Dies</h2>
+                    <input id="died" type="checkbox"></input>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <h2>Tipped Over</h2>
+                    <input id="tippedOver" type="checkbox"></input>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="section">
-        <h1 id="teleOp">Tele Op</h1>
-        <div>
-            <h2>Speaker notes scored</h2>
-            <button id="minus" name="speakerNotesScoredTeleop">-</button>
-            <input placeholder="0" id="speakerNotesScoredTeleop"></input>
-            <button id="plus" name="speakerNotesScoredTeleop">+</button>
-        </div>
-        <div>
-            <h2>Speaker notes missed</h2>
-            <button id="minus" name="speakerNotesMissedTeleop">-</button>
-            <input placeholder="0" id="speakerNotesMissedTeleop"></input>
-            <button id="plus" name="speakerNotesMissedTeleop">+</button>
-        </div>
-
-        <div>
-            <h2>AMP notes scored</h2>
-            <button id="minus" name="ampNotesScoredTeleop">-</button>
-            <input placeholder="0" id="ampNotesScoredTeleop"></input>
-            <button id="plus" name="ampNotesScoredTeleop">+</button>
-        </div>
-        <div>
-            <h2>AMP notes missed</h2>
-            <button id="minus" name="ampNotesMissedTeleop">-</button>
-            <input placeholder="0" id="ampNotesMissedTeleop"></input>
-            <button id="plus" name="ampNotesMissedTeleop">+</button>
-        </div>
-        <h2>Note Pickup Location</h2>
-        <label for="notePickupLocation">Note Pickup Location</label>
-
-        <select name="notePickupLocation" id="notePickupLocation">
-            <option value="none">None</option>
-            <option value="ground">Ground</option>
-            <option value="manuallySet">Manually Set</option>
-            <option value="both">Both</option>
-        </select>
-        <div>
+        <div class="section">
+            <h1>Additional Notes</h1>
+            <h3>Capped at 100 characters to make QR code readable</h3>
+            <textarea id="Notes" maxlength=100 placeholder="Type any additional notes here" style="font-size:35px;"
+                rows="5" cols="45"></textarea>
             <div>
-                <h2>Coopertition</h2>
-                <input id="coopertition" type="checkbox" style="vertical-align:middle"></input>
+                <button id="endOfForm">Submit</button>
             </div>
-        </div>
-    </div>
-    <div class="section">
-        <h1 id="endgame">Endgame</h1>
+            <canvas id="qrcode-2"></canvas>
+            <h3>Do not clear or submit the form again until the QR code has been scanned
+            </h3>
 
-
-        <div>
-            <h2>Trap note scored</h2>
-            <input id="trapNotesScored" type="checkbox"></input>
-        </div>
-        <h2>End Position</h2>
-        <label for="endPosition">End Position</label>
-
-        <select name="endPosition" id="endPosition">
-            <option value="noClimb">No Climb</option>
-            <option value="parked">Parked</option>
-            <option value="onstage">Onstage</option>
-            <option value="spotlit">Spotlit</option>
-        </select>
-        <h2>Harmony</h2>
-        <label for="harmony">Harmony</label>
-
-        <select name="harmony" id="harmony">
-            <option value="none">None</option>
-            <option value="firstOnChain">1st on Chain</option>
-            <option value="secondOnChain">2nd on Chain</option>
-            <option value="thirdOnChain">3rd on Chain</option>
-        </select>
-        <h2>High Note</h2>
-        <label for="highNote">High Note</label>
-
-        <select name="highNote" id="highNote">
-            <option value="none">None</option>
-            <option value="firstOnChain">1st on Chain</option>
-            <option value="secondOnChain">2nd on Chain</option>
-            <option value="thirdOnChain">3rd on Chain</option>
-        </select>
-        <h1 id="postmatch">Postmatch</h1>
-        <div>
             <div>
-                <h2>Yellow Card</h2>
-                <input id="yellowCard" type="checkbox"></input>
+                <button id="clearForm">Clear form</button>
             </div>
-        </div>
-        <div>
             <div>
-                <h2>Red Card</h2>
-                <input id="redCard" type="checkbox"></input>
+                <button onclick="window.location.href='..'">Stop</button>
             </div>
-        </div>
-        <h2>Offense skill</h2>
-        <label for="offenseSkill">Offense skill</label>
-
-        <select name="offenseSkill" id="offenseSkill">
-            <option value="bad">Bad</option>
-            <option value="mid">Mid</option>
-            <option value="good">Good</option>
-            <option value="notObserved">Not Observed</option>
-        </select>
-        <h2>Defense skill</h2>
-        <label for="defenseSkill">Defense skill</label>
-
-        <select name="defenseSkill" id="defenseSkill">
-            <option value="bad">Bad</option>
-            <option value="mid">Mid</option>
-            <option value="good">Good</option>
-            <option value="notObserved">Not Observed</option>
-        </select>
-        <div>
-            <h2>Amount of fouls</h2>
-            <button id="minus" name="amountOfFouls">-</button>
-            <input placeholder="0" id="amountOfFouls"></input>
-            <button id="plus" name="amountOfFouls">+</button>
-        </div>
-        <div>
-            <div>
-                <h2>Dies</h2>
-                <input id="died" type="checkbox"></input>
-            </div>
-        </div>
-        <div>
-            <div>
-                <h2>Tipped Over</h2>
-                <input id="tippedOver" type="checkbox"></input>
-            </div>
-        </div>
-    </div>
-    <div class="section">
-        <h1>Additional Notes</h1>
-        <h3>Capped at 100 characters to make QR code readable</h3>
-        <textarea id="Notes" maxlength=100 placeholder="Type any additional notes here" style="font-size:35px;" rows="5"
-            cols="45"></textarea>
-        <div>
-            <button id="endOfForm">Submit</button>
-        </div>
-        <canvas id="qrcode-2"></canvas>
-        <h3>Do not clear or submit the form again until the QR code has been scanned
-        </h3>
-
-        <div>
-            <button id="clearForm">Clear form</button>
-        </div>
-        <div>
-            <button onclick="window.location.href='..'">Stop</button>
         </div>
     </div>
 </body>
