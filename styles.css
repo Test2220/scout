@@ -44,7 +44,8 @@ h3 {
 }
 
 input[type=checkbox] {
-  transform: scale(3);
+  transform: scale(2);
+  position: relative;
 
 }
 
