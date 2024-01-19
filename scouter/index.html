@@ -234,25 +234,32 @@
             </div>
 
             <div>
-               
-             <h2>Additional Notes</h2>
-                    <h3>Capped at 100 characters to make QR code readable</h3>
-                    <textarea id="Notes" maxlength=100 placeholder="Type any additional notes here"
-                        style="font-size:35px;" rows="5" cols="45"></textarea>
-                    <div>
-                        <button id="endOfForm">Submit</button>
-                    </div>
-                    <canvas id="qrcode-2"></canvas>
-                    <h3>Do not clear or submit the form again until the QR code has been scanned
-                    </h3>
 
-                    <div>
-                        <button id="clearForm">Clear form</button>
-                    </div>
-                    <div>
-                        <button onclick="window.location.href='..'">Stop</button>
-                    </div>
-             
+                <h2>Additional Notes</h2>
+                <h3>Capped at 100 characters to make QR code readable</h3>
+                <textarea name="Notes" id="Notes" maxlength=100 placeholder="Type any additional notes here" style="font-size:35px;"
+                    rows="5" cols="45"></textarea>
+                </textarea>
+                <div id="character-counter">
+                    <span id="typed-characters">0</span>
+                    <span>/</span>
+                    <span id="maximum-characters">100</span>
+                    <span>characters left</span>
+                </div>
+                <div>
+                    <button id="endOfForm">Submit</button>
+                </div>
+                <canvas id="qrcode-2"></canvas>
+                <h3>Do not clear or submit the form again until the QR code has been scanned
+                </h3>
+
+                <div>
+                    <button id="clearForm">Clear form</button>
+                </div>
+                <div>
+                    <button onclick="window.location.href='..'">Stop</button>
+                </div>
+
             </div>
             <img src="https://images.squarespace-cdn.com/content/v1/5bb6b1f9b9144958521afd76/1538702192389-JTSFQO9BYF2PA3QNOHB7/Copy%2Bof%2BTeam2220_BlueLogo.png"
                 alt="Team 2220 Blue Twilight Logo">
