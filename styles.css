@@ -209,12 +209,12 @@ h2 {
   cursor: pointer;
   background-color: rgb(0, 106, 255);
   border-radius: 80px;
-  position: relative;
+  text-align: center;
   margin-bottom: 1.5rem;
   margin-right: 1.2rem;
   margin-left: 1.2rem;
   font-size: 2rem;
-  padding: 0.25em 1em;
+  
   text-decoration: none;
   color: rgb(255, 255, 255);
   margin: 30px;
