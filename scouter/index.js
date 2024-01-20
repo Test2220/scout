@@ -17,14 +17,10 @@ function submitResults(event) {
     let inputs = [];
     let results = {};
 
-    // for (let i = 0, max = all.length; i < max; i++) {
-    //     if (all[i].nodeName === "INPUT" || all[i].nodeName === "TEXTAREA") {
-    //         inputs.push(all[i]);
-    //     }
-    // }
-
     for (let i = 0, max = all.length; i < max; i++) {
-        if (all[i].nodeName === "SELECT") {
+        if (all[i].nodeName === "INPUT" ||
+            all[i].nodeName === "TEXTAREA" ||
+            all[i].nodeName == "SELECT") {
             inputs.push(all[i]);
         }
     }
