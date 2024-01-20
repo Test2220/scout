@@ -22,6 +22,24 @@ function domReady(fn) {
 	}
 }
 
+const banner = document.getElementById("success-banner")
+
+function success() {
+	console.log("success")
+	banner.style.backgroundColor = "#35d967";
+	banner.style.color = "#ffffff";
+	banner.innerHTML = "QR code scanned"
+}
+
+function successClear() {
+	console.log("success clear")
+	banner.style.backgroundColor = "#ffffff";
+	banner.style.color = "#000000";
+	banner.innerHTML = "Coordinator"
+}
+
+let timeout
+
 domReady(function () {
     let decoded
 
@@ -29,6 +47,10 @@ domReady(function () {
 	function onScanSuccess(decodeText, decodeResult) {
          //    alert("You Qr is : " + decodeText, decodeResult);
 		if (decodeText !== decoded) {
+			success();
+			timeout = setTimeout(successClear, 2500, successClear);
+
+			//alert("QR code scanned")
 			console.log("Scanned")
 			decoded = decodeText
 

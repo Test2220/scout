@@ -228,9 +228,3 @@ body {
 img {
   height: 100px;
 }
-
-
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;

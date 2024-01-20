@@ -43,7 +43,7 @@ function submitResults(event) {
 }
 
 function generateQRCode(results) {
-    let qrText = results.toString()
+    let qrText = results
 
     let qrcode = new QRious({
         element: document.getElementById("qrcode-2"),
@@ -111,7 +111,7 @@ textAreaElement.addEventListener("keyup", (event) => {
     if (typedCharacters > maximumCharacters) {
         return false;
     }
-    typedCharactersElement.textContent = typedCharacters;
+    typedCharactersElement.textContent = maximumCharacters - typedCharacters;
     if (typedCharacters >= 200 && typedCharacters < 250) {
         characterCounterElement.classList = "text-warning";
     } else if (typedCharacters >= 250) {
