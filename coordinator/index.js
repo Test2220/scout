@@ -1,14 +1,14 @@
 
 let savedResults = []
 // localStorage.removeItem("Saved-Scanned")
-try {
-	let oldData = JSON.parse(localStorage.getItem("Saved-Scanned"))
-	if (!oldData) {
-		savedResults = []
-	} else if (Array.isArray(oldData)) {
-		savedResults = oldData
-	}
-} catch {}
+// try {
+// 	let oldData = JSON.parse(localStorage.getItem("Saved-Scanned"))
+// 	if (!oldData) {
+// 		savedResults = []
+// 	} else if (Array.isArray(oldData)) {
+// 		savedResults = oldData
+// 	}
+// } catch {}
 
 function domReady(fn) {
 	if (

@@ -1,69 +1,183 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
-
-:root {
-  --foreground-rgb: 255,255,255;
-  --background-start-rgb: 255, 255, 255;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 255, 255, 255;
-    --background-end-rgb: 255, 255, 255;
+* {
+    font-family: "Varela Round", sans-serif;
   }
-}
 
-
-
-input {
-  border-radius: 15px;
-  text-align: center;
-  color:black;
-  width: 125px;
-  height: 50px;
-  font-size: 50px;
-  padding: 25px;
-  margin: 15px;
-}
-
-textarea {
-  width: 400px;
-  margin: 15px;
-  text-align: center;
-  border-width: 1px;
-}
-
-
-html {
-  font-family: "Inter", sans-serif;
-  text-align: center;
-}
-
-h1 {
-  font-size: 50px;
-}
-
-h2 {
-  font-size: 35px;
-}
-
-button {
+  button {
 
     cursor: pointer;
     background-color: rgb(0, 106, 255);
-    border-radius: 80px;
+    border-radius: 40px;
     position: relative;
     margin-bottom: 1.5rem;
-    margin-right: 1.2rem;
-    margin-left: 1.2rem;
-    font-size: 2rem;
+    font-size: 1.85rem;
     padding: 0.25em 1em;
     text-decoration: none;
     color: rgb(255, 255, 255);
   }
-  
+
+  canvas {
+    margin-bottom: 1.5rem;
+    padding: 0.25em 1em;
+
+  }
+
+  h1 {
+    color: black;
+  }
+  h2 {
+    color: black;
+  }h1 {
+    color: black;
+  }
+  h4 {
+    color: black;
+  }
+  h3 {
+    color: black;
+  }
+
+  input[type=checkbox] {
+    transform: scale(3);
+
+  }
+
+
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #dfdfdf;
+    transition: 0.4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+  }
+
+  input:checked + .slider {
+    background-color: rgb(0, 106, 255);
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  input {
+    height: 1rem;
+  }
+
+  ::-webkit-scrollbar {
+    width: 13px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgb(255, 255, 255);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(#a8a8a8, #a8a8a8);
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(#a8a8a8, #a8a8a8);
+  }
+  ::-webkit-scrollbar-thumb:active {
+    background: linear-gradient(#a8a8a8, #a8a8a8);
+  }
+
+  .progress-container {
+    width: 100%;
+    height: 10px;
+    background: rgb(215, 215, 215);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+  }
+  .progress-container .progress-bar {
+    height: 10px;
+    border-radius: 10px;
+    background: linear-gradient(#0080ff, #0080ff);
+    width: 0%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+  }/*# sourceMappingURL=styles.css.map */
+
+
+  /* style.css file*/
+body {
+
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	box-sizing: border-box;
+	text-align: center;
+	background: rgb(255, 255, 255);
+}
+.container {
+	max-width: 500px;
+	margin: auto;
+    padding-bottom: 20px;
+}
+
+.container h1 {
+	color: #ffffff;
+}
+
+.section {
+	background-color: #ffffff;
+	padding: 50px 30px;
+	border: 1.5px solid #b2b2b2;
+	border-radius: 0.25em;
+}
+
+#my-qr-reader {
+	padding: 20px !important;
+	border: 1.5px solid #b2b2b2 !important;
+	border-radius: 8px;
+}
+
+#my-qr-reader img[alt="Info icon"] {
+	display: none;
+}
+
+#my-qr-reader img[alt="Camera based scan"] {
+	width: 100px !important;
+	height: 100px !important;
+}
+
+
+
+#html5-qrcode-anchor-scan-type-change {
+	text-decoration: none !important;
+	color: #1d9bf0;
+}
+
+video {
+	width: 100% !important;
+	border: 1px solid #b2b2b2 !important;
+	border-radius: 0.25em;
+}
