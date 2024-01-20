@@ -10,6 +10,7 @@ let savedResults = []
 // 	}
 // } catch {}
 
+
 function domReady(fn) {
 	if (
 		document.readyState === "complete" ||
@@ -33,6 +34,10 @@ domReady(function () {
 
 			decodeText = JSON.parse(decodeText)
 			console.log(decodeText)
+
+			for (let [key, value] of Object.entries(decodeText)) {
+				console.log(key);
+			}
 		
 			savedResults.push(decodeText);
 			localStorage.setItem("Saved-Scanned", JSON.stringify(savedResults));	
