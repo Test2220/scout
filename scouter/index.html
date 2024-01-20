@@ -53,16 +53,14 @@
                 <button type="button" class="collapsible">Autonomous ▼</button>
                 <div class="section">
                     <div>
+                        <h2>Starting position</h2>
+                        <input placeholder="..." id="startingPosition"></input>
+                    </div>
+                    <div>
                         <h2>Speaker notes scored</h2>
                         <button id="minus" name="speakerNotesScoredAuto">-</button>
                         <input placeholder="0" id="speakerNotesScoredAuto"></input>
                         <button id="plus" name="speakerNotesScoredAuto">+</button>
-                    </div>
-                    <div>
-                        <h2>Speaker notes missed</h2>
-                        <button id="minus" name="speakerNotesMissedAuto">-</button>
-                        <input placeholder="0" id="speakerNotesMissedAuto"></input>
-                        <button id="plus" name="speakerNotesMissedAuto">+</button>
                     </div>
                     <div>
                         <div>
@@ -72,24 +70,10 @@
                             <button id="plus" name="ampNotesScoredAuto">+</button>
                         </div>
                         <div>
-                            <h2>AMP notes missed</h2>
-                            <button id="minus" name="ampNotesMissedAuto">-</button>
-                            <input placeholder="0" id="ampNotesMissedAuto"></input>
-                            <button id="plus" name="ampNotesMissedAuto">+</button>
-                        </div>
-
-                        <div>
                             <div>
                                 <h2>Left starting area</h2>
                                 <input id="leftStartingArea" type="checkbox" style="vertical-align:middle"></input>
                             </div>
-                        </div>
-                        <div>
-                            <div>
-                                <h2>Auto foul</h2>
-                                <input id="autoFoul" type="checkbox" style="vertical-align:middle"></input>
-                            </div>
-
                         </div>
                     </div>
                 </div>
@@ -105,23 +89,10 @@
                         <button id="plus" name="speakerNotesScoredTeleop">+</button>
                     </div>
                     <div>
-                        <h2>Speaker notes missed</h2>
-                        <button id="minus" name="speakerNotesMissedTeleop">-</button>
-                        <input placeholder="0" id="speakerNotesMissedTeleop"></input>
-                        <button id="plus" name="speakerNotesMissedTeleop">+</button>
-                    </div>
-
-                    <div>
                         <h2>AMP notes scored</h2>
                         <button id="minus" name="ampNotesScoredTeleop">-</button>
                         <input placeholder="0" id="ampNotesScoredTeleop"></input>
                         <button id="plus" name="ampNotesScoredTeleop">+</button>
-                    </div>
-                    <div>
-                        <h2>AMP notes missed</h2>
-                        <button id="minus" name="ampNotesMissedTeleop">-</button>
-                        <input placeholder="0" id="ampNotesMissedTeleop"></input>
-                        <button id="plus" name="ampNotesMissedTeleop">+</button>
                     </div>
                     <h2>Note Pickup Location</h2>
                     <label for="notePickupLocation">Note Pickup Location</label>
@@ -130,8 +101,8 @@
                         <option value="Not observed" selected>Not observed</option>
                         <option value="none">None</option>
                         <option value="ground">Ground</option>
-                        <option value="manually Set">Manually Set</option>
-                        <option value="both">Both</option>
+                        <option value="source">Source</option>
+                        <option value="ground & source">ground & source</option>
                     </select>
                     <div>
                         <div>
@@ -147,7 +118,7 @@
                 <div class="section">
                     <div>
                         <h2>Trap note scored</h2>
-                        <input id="trapNotesScored" type="checkbox"></input>
+                        <input id="trapNoteScored" type="checkbox"></input>
                     </div>
                     <h2>End Position</h2>
                     <label for="endPosition">End Position</label>
@@ -159,27 +130,15 @@
                         <option value="onstage">Onstage</option>
                         <option value="spotlit">Spotlit</option>
                     </select>
-                    <h2>Harmony</h2>
-                    <label for="harmony">Harmony</label>
-
-                    <select name="harmony" id="harmony">
-                        <option value="Not observed" selected>Not observed</option>
-                        <option value="none">None</option>
-                        <option value="firstOnChain">1st on Chain</option>
-                        <option value="secondOnChain">2nd on Chain</option>
-                        <option value="thirdOnChain">3rd on Chain</option>
-
-                    </select>
-                    <h2>High Note</h2>
-                    <label for="highNote">High Note</label>
-
-                    <select name="highNote" id="highNote">
-                        <option value="Not observed" selected>Not observed</option>
-                        <option value="none">None</option>
-                        <option value="firstOnChain">1st on Chain</option>
-                        <option value="secondOnChain">2nd on Chain</option>
-                        <option value="thirdOnChain">3rd on Chain</option>
-                    </select>
+                    <div>
+                        <h2>Contributed to harmony</h2>
+                        <input id="contributedToHarmony" type="checkbox"></input>
+                    </div>
+                    
+                    <div>
+                        <h2>High note</h2>
+                        <input id="highNote" type="checkbox"></input>
+                    </div>
                 </div>
             </div>
             <div>
@@ -223,7 +182,7 @@
                     </div>
                     <div>
                         <div>
-                            <h2>Dies</h2>
+                            <h2>Died</h2>
                             <input id="died" type="checkbox"></input>
                         </div>
                     </div>
