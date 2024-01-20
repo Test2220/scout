@@ -1,3 +1,12 @@
+/*
+
+Places we found this code:
+1. https://www.geeksforgeeks.org/create-a-qr-code-scanner-or-reader-in-html-css-javascript/
+2. https://medium.com/geekculture/few-ways-to-generate-qr-code-using-javascript-54b6b5220c4f
+3. https://community.neptune-software.com/topics/planet-9/blogs/html--java-script-qr-code-scanner-pwa-ready
+
+*/
+
 var __Html5QrcodeLibrary__;
 (() => {
 	var t = {
