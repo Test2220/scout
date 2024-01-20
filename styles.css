@@ -44,7 +44,8 @@ h3 {
 }
 
 input[type=checkbox] {
-  transform: scale(3);
+  transform: scale(2);
+  text-align: center;
 
 }
 
@@ -137,8 +138,6 @@ input {
 
 /*# sourceMappingURL=styles.css.map */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
-
 :root {
   --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 255, 255, 255;
@@ -172,7 +171,7 @@ input {
 }
 
 textarea {
-  width: 400px;
+  width: 300px;
   margin: 15px;
   text-align: center;
   border-width: 1px;
@@ -192,29 +191,33 @@ h2 {
   font-size: 35px;
 }
 
+body {
+  color: black;
+}
 
 
+ 
 .section {
-  border: 2px solid #0080ff;
+  /* border: 2px solid #0080ff; */
+  border-radius: 40px;
   width: 20%;
   margin-right: 20px;
   margin-left: 20px;
   padding: 25px;
   display: none;
   overflow: hidden;
-  background-color: #84c1ff;
+  background-color: #c8e4ff;
 }
 
 .collapsible {
   cursor: pointer;
-  background-color: rgb(0, 106, 255);
   border-radius: 80px;
-  text-align: center;
+  position: relative;
   margin-bottom: 1.5rem;
   margin-right: 1.2rem;
   margin-left: 1.2rem;
   font-size: 2rem;
-  
+  padding: 0.25em 1em;
   text-decoration: none;
   color: rgb(255, 255, 255);
   margin: 30px;
@@ -225,6 +228,5 @@ h2 {
 }
 
 img {
-  height: 10%;
-  width: 10%;
+  height: 100px;
 }

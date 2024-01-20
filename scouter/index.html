@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles.css">
-    <script src="./scroll-indicator.js" defer></script>
     <script src="./index.js" type="module" defer></script>
     <script src="./button.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -128,9 +127,10 @@
                     <label for="notePickupLocation">Note Pickup Location</label>
 
                     <select name="notePickupLocation" id="notePickupLocation">
+                        <option value="Not observed" selected>Not observed</option>
                         <option value="none">None</option>
                         <option value="ground">Ground</option>
-                        <option value="manuallySet">Manually Set</option>
+                        <option value="manually Set">Manually Set</option>
                         <option value="both">Both</option>
                     </select>
                     <div>
@@ -152,7 +152,8 @@
                     <h2>End Position</h2>
                     <label for="endPosition">End Position</label>
 
-                    <select name="endPosition" id="endPosition">
+                    <select name="endPosition" id="endPosition">                       
+                        <option value="Not observed" selected>Not observed</option>
                         <option value="noClimb">No Climb</option>
                         <option value="parked">Parked</option>
                         <option value="onstage">Onstage</option>
@@ -162,15 +163,18 @@
                     <label for="harmony">Harmony</label>
 
                     <select name="harmony" id="harmony">
+                        <option value="Not observed" selected>Not observed</option>
                         <option value="none">None</option>
                         <option value="firstOnChain">1st on Chain</option>
                         <option value="secondOnChain">2nd on Chain</option>
                         <option value="thirdOnChain">3rd on Chain</option>
+
                     </select>
                     <h2>High Note</h2>
                     <label for="highNote">High Note</label>
 
                     <select name="highNote" id="highNote">
+                        <option value="Not observed" selected>Not observed</option>
                         <option value="none">None</option>
                         <option value="firstOnChain">1st on Chain</option>
                         <option value="secondOnChain">2nd on Chain</option>
@@ -197,19 +201,19 @@
                     <label for="offenseSkill">Offense skill</label>
 
                     <select name="offenseSkill" id="offenseSkill">
+                        <option value="Not observed" selected>Not observed</option>
                         <option value="bad">Bad</option>
                         <option value="mid">Mid</option>
                         <option value="good">Good</option>
-                        <option value="notObserved">Not Observed</option>
                     </select>
                     <h2>Defense skill</h2>
                     <label for="defenseSkill">Defense skill</label>
 
                     <select name="defenseSkill" id="defenseSkill">
+                        <option value="Not observed" selected>Not observed</option>
                         <option value="bad">Bad</option>
                         <option value="mid">Mid</option>
                         <option value="good">Good</option>
-                        <option value="notObserved">Not Observed</option>
                     </select>
                     <div>
                         <h2>Amount of fouls</h2>
@@ -234,25 +238,32 @@
             </div>
 
             <div>
-                <button type="button" class="collapsible">Additional Notes ▼</button>
-                <div class="section">
-                    <h3>Capped at 100 characters to make QR code readable</h3>
-                    <textarea id="Notes" maxlength=100 placeholder="Type any additional notes here"
-                        style="font-size:35px;" rows="5" cols="45"></textarea>
-                    <div>
-                        <button id="endOfForm">Submit</button>
-                    </div>
-                    <canvas id="qrcode-2"></canvas>
-                    <h3>Do not clear or submit the form again until the QR code has been scanned
-                    </h3>
 
-                    <div>
-                        <button id="clearForm">Clear form</button>
-                    </div>
-                    <div>
-                        <button onclick="window.location.href='..'">Stop</button>
-                    </div>
+                <h2>Additional Notes</h2>
+                <h3>Capped at 100 characters to make QR code readable</h3>
+                <textarea name="Notes" id="Notes" maxlength=100 placeholder="Type any additional notes here" style="font-size:35px;"
+                    rows="5" cols="45"></textarea>
+                </textarea>
+                <div id="character-counter">
+                    <span id="typed-characters">0</span>
+                    <span>/</span>
+                    <span id="maximum-characters">100</span>
+                    <span>characters left</span>
                 </div>
+                <div>
+                    <button id="endOfForm">Submit</button>
+                </div>
+                <canvas id="qrcode-2"></canvas>
+                <h3>Do not clear or submit the form again until the QR code has been scanned
+                </h3>
+
+                <div>
+                    <button id="clearForm">Clear form</button>
+                </div>
+                <div>
+                    <button onclick="window.location.href='..'">Stop</button>
+                </div>
+
             </div>
             <img src="https://images.squarespace-cdn.com/content/v1/5bb6b1f9b9144958521afd76/1538702192389-JTSFQO9BYF2PA3QNOHB7/Copy%2Bof%2BTeam2220_BlueLogo.png"
                 alt="Team 2220 Blue Twilight Logo">
