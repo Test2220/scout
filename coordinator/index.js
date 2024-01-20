@@ -1,14 +1,14 @@
 
 let savedResults = []
 // localStorage.removeItem("Saved-Scanned")
-// try {
-// 	let oldData = JSON.parse(localStorage.getItem("Saved-Scanned"))
-// 	if (!oldData) {
-// 		savedResults = []
-// 	} else if (Array.isArray(oldData)) {
-// 		savedResults = oldData
-// 	}
-// } catch {}
+try {
+	let oldData = JSON.parse(localStorage.getItem("Saved-Scanned"))
+	if (!oldData) {
+		savedResults = []
+	} else if (Array.isArray(oldData)) {
+		savedResults = oldData
+	}
+} catch {}
 
 
 function domReady(fn) {
@@ -48,7 +48,7 @@ domReady(function () {
          //    alert("You Qr is : " + decodeText, decodeResult);
 		if (decodeText !== decoded) {
 			success();
-			timeout = setTimeout(successClear, 2500, successClear);
+			timeout = setTimeout(successClear, 3000, successClear);
 
 			//alert("QR code scanned")
 			console.log("Scanned")
@@ -74,56 +74,56 @@ domReady(function () {
 	htmlscanner.render(onScanSuccess);
 });
 
-// function downloadBlob(content, filename, contentType) {
-// 	// Create a blob
-// 	var blob = new Blob([content], { type: contentType });
-// 	var url = URL.createObjectURL(blob);
+function downloadBlob(content, filename, contentType) {
+	// Create a blob
+	var blob = new Blob([content], { type: contentType });
+	var url = URL.createObjectURL(blob);
   
-// 	// Create a link to download it
-// 	var pom = document.createElement('a');
-// 	pom.href = url;
-// 	pom.setAttribute('download', filename);
-// 	pom.click();
-// }
+	// Create a link to download it
+	var pom = document.createElement('a');
+	pom.href = url;
+	pom.setAttribute('download', filename);
+	pom.click();
+}
 
-// function arrayToCsv(data) {
-// 	return data.map(row =>
-// 		row
-// 			.map(String)  // convert every value to String
-// 			.map(v => v.replaceAll('"', '""'))  // escape double quotes
-// 			.map(v => `"${v}"`)  // quote it
-// 			.join(',')  // comma-separated
-// 	).join('\r\n');  // rows starting on new lines
-// }
+function arrayToCsv(data) {
+	return data.map(row =>
+		row
+			.map(String)  // convert every value to String
+			.map(v => v.replaceAll('"', '""'))  // escape double quotes
+			.map(v => `"${v}"`)  // quote it
+			.join(',')  // comma-separated
+	).join('\r\n');  // rows starting on new lines
+}
 
-// function Export() {
-// 	let data = JSON.parse(localStorage.getItem("Saved-Scanned"))
+function Export() {
+	let data = JSON.parse(localStorage.getItem("Saved-Scanned"))
 
-// 	let allKeys = []
+	let allKeys = []
 		
-// 	for (i = 0; imax = data.length, i < imax; i++) {
-// 		keys = Object.keys(data[i])
-// 		for (v = 0; vmax = keys.length, v < vmax; v++) {
-// 			if (allKeys.indexOf(keys[v]) == -1) {
-// 				allKeys.push(keys[v])
-// 			}
-// 		}
-// 	}
+	for (i = 0; imax = data.length, i < imax; i++) {
+		keys = Object.keys(data[i])
+		for (v = 0; vmax = keys.length, v < vmax; v++) {
+			if (allKeys.indexOf(keys[v]) == -1) {
+				allKeys.push(keys[v])
+			}
+		}
+	}
 
-// 	let csv = [allKeys]
+	let csv = [allKeys]
 
-// 	for (i = 0; imax = data.length, i < imax; i++) {
-// 		let push = []
-// 		for (v = 0; vmax = allKeys.length, v < vmax; v++) {
-// 			if (allKeys[v] in data[i]) {
-// 				push.push(data[i][allKeys[v]])
-// 			}
-// 		}
-// 		csv.push(push)
-// 	}
+	for (i = 0; imax = data.length, i < imax; i++) {
+		let push = []
+		for (v = 0; vmax = allKeys.length, v < vmax; v++) {
+			if (allKeys[v] in data[i]) {
+				push.push(data[i][allKeys[v]])
+			}
+		}
+		csv.push(push)
+	}
 
-// 	let file = arrayToCsv(csv)
-// 	downloadBlob(file, 'scouting_data.csv', 'text/csv;charset=utf-8;')
-// }
+	let file = arrayToCsv(csv)
+	downloadBlob(file, 'scouting_data.csv', 'text/csv;charset=utf-8;')
+}
 
-// document.getElementById("Export").addEventListener('click', Export);
+document.getElementById("Export").addEventListener('click', Export);
