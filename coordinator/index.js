@@ -1,13 +1,14 @@
-let savedResults = [];
+
+let savedResults = []
 // localStorage.removeItem("Saved-Scanned")
-// try {
-// 	let oldData = JSON.parse(localStorage.getItem("Saved-Scanned"))
-// 	if (!oldData) {
-// 		savedResults = []
-// 	} else if (Array.isArray(oldData)) {
-// 		savedResults = oldData
-// 	}
-// } catch {}
+try {
+	let oldData = JSON.parse(localStorage.getItem("Saved-Scanned"))
+	if (!oldData) {
+		savedResults = []
+	} else if (Array.isArray(oldData)) {
+		savedResults = oldData
+	}
+} catch {}
 
 function domReady(fn) {
 	if (
@@ -21,61 +22,36 @@ function domReady(fn) {
 }
 
 domReady(function () {
-	let decoded;
+    let decoded
 
 	// If found you qr code
 	function onScanSuccess(decodeText, decodeResult) {
-		//    alert("You Qr is : " + decodeText, decodeResult);
+         //    alert("You Qr is : " + decodeText, decodeResult);
 		if (decodeText !== decoded) {
-			console.log("Scanned");
-			decoded = decodeText;
+			console.log("Scanned")
+			decoded = decodeText
 
-			decodeText = JSON.parse(decodeText);
-			console.log(decodeText);
-
+			decodeText = JSON.parse(decodeText)
+			console.log(decodeText)
+		
 			savedResults.push(decodeText);
-			localStorage.setItem("Saved-Scanned", JSON.stringify(savedResults));
-		//	console.log(localStorage.getItem("Saved-Scanned"));
+			localStorage.setItem("Saved-Scanned", JSON.stringify(savedResults));	
+			//console.log(localStorage.getItem("Saved-Scanned"))
 		}
-	}
+    }
 
-	let htmlscanner = new Html5QrcodeScanner("my-qr-reader", {
-		fps: 30,
-		qrbos: 250,
-	});
+	let htmlscanner = new Html5QrcodeScanner(
+		"my-qr-reader",
+		{ fps: 30, qrbos: 250 }
+	);
 	htmlscanner.render(onScanSuccess);
 });
-
-// function domReady(fn) {
-//     if (
-//         document.readyState === "complete" ||
-//         document.readyState === "interactive"
-//     ) {
-//         setTimeout(fn, 1000);
-//     } else {
-//         document.addEventListener("DOMContentLoaded", fn);
-//     }
-// }
- 
-// domReady(function () {
- 
-//     // If found you qr code
-//     function onScanSuccess(decodeText, decodeResult) {
-//         alert("You Qr is : " + decodeText, decodeResult);
-//     }
- 
-//     let htmlscanner = new Html5QrcodeScanner(
-//         "my-qr-reader",
-//         { fps: 10, qrbos: 250 }
-//     );
-//     htmlscanner.render(onScanSuccess);
-// });
 
 // function downloadBlob(content, filename, contentType) {
 // 	// Create a blob
 // 	var blob = new Blob([content], { type: contentType });
 // 	var url = URL.createObjectURL(blob);
-
+  
 // 	// Create a link to download it
 // 	var pom = document.createElement('a');
 // 	pom.href = url;
@@ -97,7 +73,7 @@ domReady(function () {
 // 	let data = JSON.parse(localStorage.getItem("Saved-Scanned"))
 
 // 	let allKeys = []
-
+		
 // 	for (i = 0; imax = data.length, i < imax; i++) {
 // 		keys = Object.keys(data[i])
 // 		for (v = 0; vmax = keys.length, v < vmax; v++) {
