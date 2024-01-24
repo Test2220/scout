@@ -108,14 +108,20 @@ const maximumCharacters = 100;
 
 textAreaElement.addEventListener("keyup", (event) => {
     const typedCharacters = textAreaElement.value.length;
+    
+    typedCharactersElement.textContent = maximumCharacters - typedCharacters;
+    if (typedCharacters >= 80 && typedCharacters < 100) {
+        textAreaElement.classList = "text-warning";
+        console.log("warning");
+    } else if (typedCharacters >= 100) {
+        textAreaElement.classList = "text-danger";
+        console.log("danger");
+    } else {
+        textAreaElement.classList = "text-fine"
+    }
+
     if (typedCharacters > maximumCharacters) {
         return false;
-    }
-    typedCharactersElement.textContent = maximumCharacters - typedCharacters;
-    if (typedCharacters >= 200 && typedCharacters < 250) {
-        characterCounterElement.classList = "text-warning";
-    } else if (typedCharacters >= 250) {
-        characterCounterElement.classList = "text-danger";
     }
 });
 
