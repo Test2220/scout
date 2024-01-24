@@ -183,3 +183,17 @@ video {
 	border: 1px solid #b2b2b2 !important;
 	border-radius: 0.25em;
 }
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+  border: 0px;
+}
+
+th, td {
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
+  border-bottom: 1px solid #5b5b5b;
+}
