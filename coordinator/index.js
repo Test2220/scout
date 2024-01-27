@@ -1,13 +1,54 @@
-import express from '../node_modules/express'
-import google from '../node_modules/googleapis'
+import { express } from '../node_modules/express/index.js';
+import { google } from '../node_modules/googleapis/build/src/index.js';
 
+// const app = express()
 
-const spreadsheetId = '14h_mJ6Y2aCh06k1WqHcwK-xZQ2GZ4JbNEQ835QD2WEc'
+// app.get('/', async (req, res) => {
+//     const auth = new google.auth.GoogleAuth({
+// 		keyFile: 'keys.json',
+// 		scopes: ['https://www.googleapis.com/auth/spreadsheets']
+//     })
+    
+//     const client = await auth.getClient()
+//     // console.log("client" + client)
 
-const auth = new google.Auth.GoogleAuth({
-	keyFile: '../keys.json',
-	scopes: 'https://www.googleapis.com/auth/spreadsheets'
-})
+//     const googleSheets = google.sheets({ version: "v4", auth: client })
+//     console.log("googleSheets" + googleSheets)
+
+// 	const spreadsheetId = '14h_mJ6Y2aCh06k1WqHcwK-xZQ2GZ4JbNEQ835QD2WEc'
+
+// 	const metaData = await googleSheets.spreadsheets.get({
+// 		auth,
+// 		spreadsheetId
+//     })
+    
+//     const getRows = await googleSheets.spreadsheets.values.get({
+//         auth,
+//         spreadsheetId,
+//         range: "Test Data - Week Zero!A:X"
+//     })
+
+//     async function sendRows() {
+//         await googleSheets.spreadsheets.values.append({
+//             auth,
+//             spreadsheetId,
+//             range: "Sheet1",
+//             valueInputOption: "USER_ENTERED",
+//             resource: {
+//                 values: [
+//                     ["2220", "EK"]
+//                 ]
+//             }
+//         })
+//     }
+
+//     sendRows()
+
+//     res.send(getRows.data)
+// })
+
+////////////////////////////////////////////////////////////////////////
+
 
 let savedResults = JSON.parse(localStorage.getItem("Saved-Scanned")) || [];
 console.log(savedResults);
