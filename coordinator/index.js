@@ -1,3 +1,14 @@
+import express from '../node_modules/express'
+import google from '../node_modules/googleapis'
+
+
+const spreadsheetId = '14h_mJ6Y2aCh06k1WqHcwK-xZQ2GZ4JbNEQ835QD2WEc'
+
+const auth = new google.Auth.GoogleAuth({
+	keyFile: '../keys.json',
+	scopes: 'https://www.googleapis.com/auth/spreadsheets'
+})
+
 let savedResults = JSON.parse(localStorage.getItem("Saved-Scanned")) || [];
 console.log(savedResults);
 
