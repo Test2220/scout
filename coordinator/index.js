@@ -1,7 +1,7 @@
 import { express } from '../node_modules/express/index.js';
 import { google } from '../node_modules/googleapis/build/src/index.js';
 
-// const app = express()
+const app = express()
 
 // app.get('/', async (req, res) => {
 //     const auth = new google.auth.GoogleAuth({
