@@ -1,4 +1,4 @@
-import { express } from 'express';
+import { express } from '../node_modules/express';
 import { google } from 'googleapis';
 
 const app = express()
