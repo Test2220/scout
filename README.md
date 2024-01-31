@@ -27,6 +27,12 @@ When you are done scouting, or whenever you want the data, you can export the da
 
 The manager will then take each csv file and open them into their own google sheet or other sheet software. After this, go through each sheet and copy the data from it, and then go into a central sheet and paste the data there. Repeat with every other sheet file. In the central sheet file you should see all your scouting data.
 
+## To do
+- [ ] update for google sheets integration
+- [ ] update with actual images of site
+- [ ] fix CORS errors
+- [ ] set up service workers to provide offline site functionality
+
 ---
 The guide linked below helped us create the client to create QR codes.
 https://medium.com/geekculture/few-ways-to-generate-qr-code-using-javascript-54b6b5220c4f
