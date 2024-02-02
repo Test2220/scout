@@ -1,4 +1,4 @@
-import { sendRows } from "https://scout-2220.vercel.app/coordinator/sheets.mjs";
+import { sendRows } from "https://scout-2220.vercel.app/coordinator/sheets.js";
 
 // if (sendFunction) {
 // 	sendFunction()
