@@ -1,57 +1,53 @@
-// import { express } from 'express';
-// import { google } from 'googleapis';
+import { express } from 'express';
+import { google } from 'googleapis';
 
-// const app = express()
+const app = express()
 
-// app.get('/', async (req, res) => {
-//     const auth = new google.auth.GoogleAuth({
-// 		keyFile: 'keys.json',
-// 		scopes: ['https://www.googleapis.com/auth/spreadsheets']
-//     })
+let client, googleSheets, spreadsheetId, auth, metaData
+
+app.get('/', async (req, res) => {
+	console.log('Hello world')
+    const auth = new google.auth.GoogleAuth({
+		keyFile: 'keys.json',
+		scopes: ['https://www.googleapis.com/auth/spreadsheets']
+    })
     
-//     const client = await auth.getClient()
-//     // console.log("client" + client)
+    const client = await auth.getClient()
+    console.log("client" + client)
 
-//     const googleSheets = google.sheets({ version: "v4", auth: client })
-//     console.log("googleSheets" + googleSheets)
+    const googleSheets = google.sheets({ version: "v4", auth: client })
+    console.log("googleSheets" + googleSheets)
 
-// 	const spreadsheetId = '14h_mJ6Y2aCh06k1WqHcwK-xZQ2GZ4JbNEQ835QD2WEc'
+	const spreadsheetId = '14h_mJ6Y2aCh06k1WqHcwK-xZQ2GZ4JbNEQ835QD2WEc'
 
-// 	const metaData = await googleSheets.spreadsheets.get({
-// 		auth,
-// 		spreadsheetId
-//     })
-    
-//     const getRows = await googleSheets.spreadsheets.values.get({
-//         auth,
-//         spreadsheetId,
-//         range: "Test Data - Week Zero!A:X"
-//     })
+	const metaData = await googleSheets.spreadsheets.get({
+		auth,
+		spreadsheetId
+    })
 
-//     async function sendRows() {
-//         await googleSheets.spreadsheets.values.append({
-//             auth,
-//             spreadsheetId,
-//             range: "Sheet1",
-//             valueInputOption: "USER_ENTERED",
-//             resource: {
-//                 values: [
-//                     ["2220", "EK"]
-//                 ]
-//             }
-//         })
-//     }
+    async function sendRows() {
+        await googleSheets.spreadsheets.values.append({
+            auth,
+            spreadsheetId,
+            range: "Sheet1",
+            valueInputOption: "USER_ENTERED",
+            resource: {
+                values: [
+                    ["2220", "EK"]
+                ]
+            }
+        })
+    }
 
-//     sendRows()
+    sendRows()
 
-//     res.send(getRows.data)
-// })
+})
 
 ////////////////////////////////////////////////////////////////////////
 
 
 let savedResults = JSON.parse(localStorage.getItem("Saved-Scanned")) || [];
-console.log(savedResults);
+// console.log(savedResults);
 
 //localStorage.removeItem("Saved-Scanned")
 try {
@@ -59,12 +55,12 @@ try {
 
 	for (i = 0; i < savedResults.length; i++) {
 		let pushed = [];
-		console.log(savedResults[i]);
+		// console.log(savedResults[i]);
 		for (let [key, value] of Object.entries(savedResults[i])) {
 			pushed.push(value);
-			console.log(value);
+			// console.log(value);
 		}
-		console.log(pushed)
+		// console.log(pushed)
 		addToTable(pushed);
 	}
 } catch {}
@@ -85,14 +81,14 @@ function domReady(fn) {
 const banner = document.getElementById("success-banner");
 
 function success() {
-	console.log("success");
+	// console.log("success");
 	banner.style.backgroundColor = "#35d967";
 	banner.style.color = "#ffffff";
 	banner.innerHTML = "QR code scanned";
 }
 
 function successClear() {
-	console.log("success clear");
+	// console.log("success clear");
 	banner.style.backgroundColor = "#ffffff";
 	banner.style.color = "#000000";
 	banner.innerHTML = "Coordinator";
@@ -111,7 +107,7 @@ domReady(function () {
 			timeout = setTimeout(successClear, 3000, successClear);
 
 			//alert("QR code scanned")
-			console.log("Scanned");
+			// console.log("Scanned");
 			decoded = decodeText;
 
 			decodeText = JSON.parse(decodeText);
@@ -164,7 +160,7 @@ function arrayToCsv(data) {
 }
 
 function startTable() {
-	console.log("starting table");
+	// console.log("starting table");
 
 	let keys = [
 		"match",
@@ -199,7 +195,7 @@ function startTable() {
 function addToTable(newData) {
 	
 
-	console.log(newData);
+	// console.log(newData);
 	let allKeys = [
 		"match",
 		"scouter initials",
@@ -264,7 +260,7 @@ function Export() {
 document.getElementById("Export").addEventListener("click", Export);
 
 function generateTable(data) {
-	console.log("Generated table");
+	// console.log("Generated table");
 	// creates a <table> element and a <tbody> element
 	const tbl = document.getElementById("table");
 	const tblBody = document.getElementById("table-body");
