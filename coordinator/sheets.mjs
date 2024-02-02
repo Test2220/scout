@@ -1,5 +1,5 @@
-import { express } from 'express';
-import { google } from 'googleapis';
+import { express } from '../node_modules/express';
+import { google } from '../node_modules/googleapis';
 
 const app = express()
 
