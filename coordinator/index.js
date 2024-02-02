@@ -1,5 +1,5 @@
-const { express } = require('express')
-const { google } = require('googleapis')
+import { express } from '../node_modules/express/';
+import { google } from '../node_modules/googleapis/';
 
 const app = express()
 
