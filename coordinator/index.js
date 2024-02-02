@@ -1,31 +1,31 @@
-import { express } from 'express';
-import { google } from 'googleapis';
+import { express } from '../node_modules/express';
+import { google } from '../node_modules/googleapis';
 
 const app = express()
 
-let client, googleSheets, spreadsheetId, auth, metaData
+let client, googleSheets, spreadsheetId, auth, metaData, sendFunction
 
 app.get('/', async (req, res) => {
 	console.log('Hello world')
-    const auth = new google.auth.GoogleAuth({
+    auth = new google.auth.GoogleAuth({
 		keyFile: 'keys.json',
 		scopes: ['https://www.googleapis.com/auth/spreadsheets']
     })
     
-    const client = await auth.getClient()
+    client = await auth.getClient()
     console.log("client" + client)
 
-    const googleSheets = google.sheets({ version: "v4", auth: client })
+    googleSheets = google.sheets({ version: "v4", auth: client })
     console.log("googleSheets" + googleSheets)
 
-	const spreadsheetId = '14h_mJ6Y2aCh06k1WqHcwK-xZQ2GZ4JbNEQ835QD2WEc'
+	spreadsheetId = '14h_mJ6Y2aCh06k1WqHcwK-xZQ2GZ4JbNEQ835QD2WEc'
 
-	const metaData = await googleSheets.spreadsheets.get({
+	metaData = await googleSheets.spreadsheets.get({
 		auth,
 		spreadsheetId
     })
 
-    async function sendRows() {
+    sendFunction = async function sendRows() {
         await googleSheets.spreadsheets.values.append({
             auth,
             spreadsheetId,
@@ -38,10 +38,11 @@ app.get('/', async (req, res) => {
             }
         })
     }
-
-    sendRows()
-
 })
+
+// if (sendFunction) {
+// 	sendFunction()
+// }
 
 ////////////////////////////////////////////////////////////////////////
 
