@@ -158,36 +158,6 @@ function startTable() {
 }
 
 function addToTable(newData) {
-	
-
-	// console.log(newData);
-	let allKeys = [
-		"match",
-		"scouter initials",
-		"team",
-		"human player at amp",
-		"starting position",
-		"auto speaker notes scored",
-		"auto amp notes scored",
-		"left starting area",
-		"teleop speaker notes scored",
-		"teleop amp notes scored",
-		"note pickup location",
-		"coopertition",
-		"trap note scored",
-		"end position",
-		"contributed to harmony",
-		"high note",
-		"yellow card",
-		"red card",
-		"offense skill",
-		"defense skill",
-		"total fouls",
-		"died",
-		"tipped over",
-		"additional notes",
-	];
-
 	generateTable(newData);
 }
 
@@ -196,9 +166,11 @@ function Export() {
 
 	let allKeys = [];
 
-	for (i = 0; (imax = data.length), i < imax; i++) {
-		keys = Object.keys(data[i]);
-		for (v = 0; (vmax = keys.length), v < vmax; v++) {
+	let imax, vmax
+
+	for (let i = 0; (imax = data.length), i < imax; i++) {
+		let keys = Object.keys(data[i]);
+		for (let v = 0; (vmax = keys.length), v < vmax; v++) {
 			if (allKeys.indexOf(keys[v]) == -1) {
 				allKeys.push(keys[v]);
 			}
@@ -207,9 +179,9 @@ function Export() {
 
 	let csv = [allKeys];
 
-	for (i = 0; (imax = data.length), i < imax; i++) {
+	for (let i = 0; (imax = data.length), i < imax; i++) {
 		let push = [];
-		for (v = 0; (vmax = allKeys.length), v < vmax; v++) {
+		for (let v = 0; (vmax = allKeys.length), v < vmax; v++) {
 			if (allKeys[v] in data[i]) {
 				push.push(data[i][allKeys[v]]);
 			}
