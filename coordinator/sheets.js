@@ -1,5 +1,4 @@
 // import {google} from 'https://apis.google.com/js/api.js';
-// import { createClient } from '../node_modules/@supabase/supabase-js/src/SupabaseClient.ts'
 
 let auth, client, googleSheets, spreadsheetId, metaData
 
