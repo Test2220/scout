@@ -22,6 +22,7 @@ try {
 let created = false;
 
 function domReady(fn) {
+	console.log("Hello")
 	if (
 		document.readyState === "complete" ||
 		document.readyState === "interactive"
