@@ -1,41 +1,41 @@
-const cacheName = 'v2'
+// const cacheName = 'v2'
 
-self.addEventListener('install', e => {
-    console.log('Service worker installed')
-})
+// self.addEventListener('install', e => {
+//     console.log('Service worker installed')
+// })
 
-self.addEventListener('activate', e => {
-    console.log('Service worker activated')
+// self.addEventListener('activate', e => {
+//     console.log('Service worker activated')
 
-    e.waitUntil(
-        caches.keys().then(cacheNames => {
-            return Promise.all(
-                cacheNames.map(cache => {
-                    if (cache !== cacheName) {
-                        console.log('Service worker removing old caches')
-                        return caches.delete(cache)
-                    }
-                })
-            )
-        })
-    )
-})
+//     e.waitUntil(
+//         caches.keys().then(cacheNames => {
+//             return Promise.all(
+//                 cacheNames.map(cache => {
+//                     if (cache !== cacheName) {
+//                         console.log('Service worker removing old caches')
+//                         return caches.delete(cache)
+//                     }
+//                 })
+//             )
+//         })
+//     )
+// })
 
-self.addEventListener('fetch', e => {
-    console.log('Service worker fetching')
+// self.addEventListener('fetch', e => {
+//     console.log('Service worker fetching')
 
-    e.respondWith(
-        fetch(e.request)
-            .then(res => {
-                const resClone = res.clone()
+//     e.respondWith(
+//         fetch(e.request)
+//             .then(res => {
+//                 const resClone = res.clone()
                 
-                caches
-                    .open(cacheName)
-                    .then(cache => {
-                        cache.put(e.request, resClone)
-                    })
+//                 caches
+//                     .open(cacheName)
+//                     .then(cache => {
+//                         cache.put(e.request, resClone)
+//                     })
                 
-                return res
-        }).catch(err => caches.match(e.request).then(res => res))
-    )
-})
+//                 return res
+//         }).catch(err => caches.match(e.request).then(res => res))
+//     )
+// })
