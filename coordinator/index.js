@@ -39,7 +39,8 @@ function domReady(fn) {
 const colored = document.getElementById("qr-div");
 const banner = document.getElementById("success-banner")
 
-// Get container element and do testing to replace the header
+// Banner is the header
+// Colored is the qr scanner div
 
 function success() {
 	// console.log("success");
