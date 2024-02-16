@@ -33,23 +33,35 @@ function domReady(fn) {
 	}
 }
 
-const banner = document.getElementById("success-banner");
+// These let the user know when a code has been scanned
+
+
+const colored = document.getElementById("qr-div");
+const banner = document.getElementById("success-banner")
+
+// Get container element and do testing to replace the header
 
 function success() {
 	// console.log("success");
-	banner.style.backgroundColor = "#35d967";
-	banner.style.color = "#ffffff";
+	colored.style.backgroundColor = "#35d967";
+	colored.style.color = "#ffffff";
+	// banner.style.backgroundColor = "#35d967";
+	// banner.style.color = "#ffffff";
 	banner.innerHTML = "QR code scanned";
 }
 
 function successClear() {
 	// console.log("success clear");
-	banner.style.backgroundColor = "#ffffff";
-	banner.style.color = "#000000";
+	colored.style.backgroundColor = "#ffffff";
+	colored.style.color = "#000000";
+	// banner.style.backgroundColor = "#ffffff";
+	// banner.style.color = "#000000";
 	banner.innerHTML = "Coordinator";
 }
 
 let timeout;
+
+///////////////////////////////////////////////////////////////
 
 domReady(function () {
 	let decoded;
