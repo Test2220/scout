@@ -5,15 +5,6 @@ const cacheAssets = [
     'index.js',
     'styles.css',
     'README.md',
-    '/coordinator/index.html',
-    '/coordinator/index.js',
-    '/coordinator/scanner.js',
-    '/coordinator/styles.css',
-    '/scouter/index.html',
-    '/scouter/index.js',
-    '/scouter/button.js',
-    '/scouter/qr.js',
-    '/scouter/styles.css',
 ]
 
 self.addEventListener('install', e => {
