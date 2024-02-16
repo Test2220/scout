@@ -85,36 +85,36 @@ function clearForm() {
 }
 
 
-var coll = document.getElementsByClassName("collapsible");
-var i;
+var coll = document.getElementsByClassName("collapsible")
+var i
 
 for (i = 0; i < coll.length; i++) {
     coll[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-        var section = this.nextElementSibling;
+        this.classList.toggle("active")
+        var section = this.nextElementSibling
         if (section.style.display === "block") {
-            section.style.display = "none";
+            section.style.display = "none"
         } else {
-            section.style.display = "block";
+            section.style.display = "block"
         }
     });
 }
 
-const textAreaElement = document.querySelector("#Notes");
-const characterCounterElement = document.querySelector("#character-counter");
-const typedCharactersElement = document.querySelector("#typed-characters");
-const maximumCharacters = 100;
+const textAreaElement = document.querySelector("#Notes")
+const characterCounterElement = document.querySelector("#character-counter")
+const typedCharactersElement = document.querySelector("#typed-characters")
+const maximumCharacters = 100
 
 textAreaElement.addEventListener("keyup", (event) => {
-    const typedCharacters = textAreaElement.value.length;
+    const typedCharacters = textAreaElement.value.length
     
     typedCharactersElement.textContent = maximumCharacters - typedCharacters;
     if (typedCharacters >= 80 && typedCharacters < 100) {
-        textAreaElement.classList = "text-warning";
-        console.log("warning");
+        textAreaElement.classList = "text-warning"
+        console.log("warning")
     } else if (typedCharacters >= 100) {
-        textAreaElement.classList = "text-danger";
-        console.log("danger");
+        textAreaElement.classList = "text-danger"
+        console.log("danger")
     } else {
         textAreaElement.classList = "text-fine"
     }
@@ -124,5 +124,5 @@ textAreaElement.addEventListener("keyup", (event) => {
     }
 });
 
-document.getElementById("endOfForm").addEventListener('click', submitResults);
-document.getElementById("clearForm").addEventListener('click', clearForm);
+document.getElementById("endOfForm").addEventListener('click', submitResults)
+document.getElementById("clearForm").addEventListener('click', clearForm)

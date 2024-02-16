@@ -1,11 +1,3 @@
-// if (sendFunction) {
-// 	sendFunction()
-// }
-
-
-
-
-////////////////////////////////////////////////////////////////////////
 
 
 let savedResults = JSON.parse(localStorage.getItem("Saved-Scanned")) || [];
