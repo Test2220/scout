@@ -229,3 +229,9 @@ function generateTable(data) {
 	// sets the border attribute of tbl to '2'
 	tbl.setAttribute("border", "2");
 }
+
+function ClearData() {
+	localStorage.removeItemItem("Saved-Scanned")
+}
+
+document.getElementById("ClearData").addEventListener('click', ClearData)
