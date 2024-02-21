@@ -28,6 +28,7 @@ function submitResults(event) {
         results[inputs[i].id] = inputs[i].value;
     }
 
+    console.log(results)
     generateQRCode(JSON.stringify(results))
 
     if (isArray(savedResults)) {
