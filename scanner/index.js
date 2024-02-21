@@ -69,7 +69,6 @@ domReady(function () {
 
 	// If found you qr code
 	function onScanSuccess(decodeText, decodeResult) {
-		    alert('QR Code');
 		if (decodeText !== decoded) {
 			success();
 			timeout = setTimeout(successClear, 3000, successClear);
