@@ -57,7 +57,7 @@ function successClear() {
 	colored.style.color = "#000000";
 	// banner.style.backgroundColor = "#ffffff";
 	// banner.style.color = "#000000";
-	banner.innerHTML = "Coordinator";
+	banner.innerHTML = "Scanner";
 }
 
 let timeout;
