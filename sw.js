@@ -48,11 +48,11 @@ self.addEventListener("install", (event) => {
   
   self.addEventListener("fetch", (event) => {
     // when seeking an HTML page
-    if (event.request.mode === "navigate") {
-      // Return to the index.html page
-      event.respondWith(caches.match("/"));
-      return new Response("ohno", { status: 404 });
-    }
+    // if (event.request.mode === "navigate") {
+    //   // Return to the index.html page
+    //   event.respondWith(caches.match("/"));
+    //   return new Response("ohno", { status: 404 });
+    // }
   
     // For every other request type
     event.respondWith(
