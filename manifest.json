@@ -1,0 +1,16 @@
+{
+    "name": "Scout 2220",
+    "short_name": "Scout",
+    "theme_color": "#215ff3",
+    "background_color": "#2196f3",
+    "display": "standalone",
+    "orientation": "portrait",
+    "scope": "/",
+    "start_url": "/",
+    "icons": [
+        {
+          "src": "/logo.png",
+          "sizes": "300x300"
+        }
+    ]
+  }
