@@ -51,7 +51,7 @@ self.addEventListener("install", (event) => {
     if (event.request.mode === "navigate") {
       // Return to the index.html page
       event.respondWith(caches.match("/"));
-      return;
+      return "Hi";
     }
   
     // For every other request type
@@ -61,7 +61,7 @@ self.addEventListener("install", (event) => {
         const cachedResponse = await cache.match(event.request.url);
         if (cachedResponse) {
           // Return the cached response if it's available.
-          return cachedResponse;
+          return "B";
         }
         // Respond with a HTTP 404 response status.
         return new Response("Hello", { status: 404 });
