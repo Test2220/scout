@@ -9,6 +9,15 @@
     <!-- <script src="./index.js" defer></script> -->
     <title>Main</title>
     <link rel="manifest" href="httpa://scout-2220.vercel.app/manifest.json" />
+
+    <script>
+        // Does "serviceWorker" exist
+        if ("serviceWorker" in navigator) {
+          // If yes, we register the service worker
+          navigator.serviceWorker.register("sw.js");
+        }
+      </script>
+      
 </head>
 <body>
     <h1>Are you scouting or scanning?</h1>
