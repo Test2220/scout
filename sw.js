@@ -18,7 +18,8 @@ const appResources = [
     "https://scout-2220.vercel.app/scanner/index.html",
     "https://scout-2220.vercel.app/scanner/index.js",
     "https://scout-2220.vercel.app/scanner/styles.css",
-    "https://scout-2220.vercel.app/scanner/scanner.js"
+    "https://scout-2220.vercel.app/scanner/scanner.js",
+    "https://scout-2220.vercel.app/sw.js"
 ]
   
 self.addEventListener("install", (event) => {
