@@ -26,7 +26,7 @@ self.addEventListener("install", (event) => {
       (async () => {
         const cache = await caches.open(cacheName)
             cache.addAll(appResources)
-            self.log("Install")
+            console.log("Install")
       })(),
     )
   })
@@ -65,7 +65,7 @@ self.addEventListener("install", (event) => {
           return new Response("cached 404", { status: 404 });
         }
             // Respond with a HTTP 404 response status.
-            self.log(cachedResponse)
+            console.log(cachedResponse)
         return new Response("other return", { status: 404 });
       })(),
     );
