@@ -15,6 +15,13 @@
 <body>
     <h1 id="success-banner">Scanner</h1>
 
+    <script>
+    if ("serviceWorker" in navigator) {
+        // If yes, we register the service worker
+        navigator.serviceWorker.register("sw.js");
+      }
+    </script>
+    
    
     <div class="container">
         <div class="section">

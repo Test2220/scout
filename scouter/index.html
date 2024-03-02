@@ -21,6 +21,13 @@
             <div class="progress-bar" id="myBar"></div>
         </div> -->
 
+        <script>
+            if ("serviceWorker" in navigator) {
+                // If yes, we register the service worker
+                navigator.serviceWorker.register("sw.js");
+              }
+            </script>
+            
     <center>
         <h1>Scouter</h1>
         <div class="scouter">
