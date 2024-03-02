@@ -25,7 +25,8 @@ self.addEventListener("install", (event) => {
     event.waitUntil(
       (async () => {
         const cache = await caches.open(cacheName)
-        cache.addAll(appResources)
+            cache.addAll(appResources)
+            console.log("Install")
       })(),
     )
   })
