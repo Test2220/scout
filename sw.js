@@ -9,7 +9,6 @@ const appResources = [
     "/logo.png",
     "/README.md",
     "/index.js",
-    "/scouter/",
     "/scouter/button.js",
     "/scouter/index.html",
     "/scouter/index.js",
