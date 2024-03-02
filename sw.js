@@ -9,6 +9,16 @@ const appResources = [
     "/logo.png",
     "/README.md",
     "/index.js",
+    "/scouter/",
+    "/scouter/button.js",
+    "/scouter/index.html",
+    "/scouter/index.js",
+    "/scouter/qr.js",
+    "/scouter/styles.css",
+    "/scanner/index.html",
+    "/scanner/index.js",
+    "/scanner/styles.css",
+    "/scanner/scanner.js"
 ]
   
 self.addEventListener("install", (event) => {
