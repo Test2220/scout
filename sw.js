@@ -64,7 +64,8 @@ self.addEventListener("install", (event) => {
           // Return the cached response if it's available.
           return new Response("cached 404", { status: 404 });
         }
-        // Respond with a HTTP 404 response status.
+            // Respond with a HTTP 404 response status.
+            console.log(cachedResponse)
         return new Response("other return", { status: 404 });
       })(),
     );
