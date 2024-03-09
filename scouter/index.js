@@ -53,7 +53,7 @@ function generateQRCode(results) {
         foregroundAlpha: 1,
         level: 'H',
         padding: 0,
-        size: 600,
+        size: 300,
         value: qrText
     });
 }
