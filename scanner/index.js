@@ -44,7 +44,7 @@ const banner = document.getElementById("success-banner")
 function success() {
 	console.log("1")
 	// console.log("success");
-	colored.style.backgroundColor = "#35d967";
+	// colored.style.backgroundColor = "#35d967";
 	console.log("2")
 	colored.style.color = "#ffffff";
 	console.log("3")
