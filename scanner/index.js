@@ -42,21 +42,35 @@ const banner = document.getElementById("success-banner")
 // Colored is the qr scanner div
 
 function success() {
+	console.log("1")
 	// console.log("success");
 	colored.style.backgroundColor = "#35d967";
+	console.log("2")
 	colored.style.color = "#ffffff";
+	console.log("3")
+
 	// banner.style.backgroundColor = "#35d967";
 	// banner.style.color = "#ffffff";
 	banner.innerHTML = "QR code scanned";
+	console.log("4")
+
 }
 
 function successClear() {
+	console.log("6")
+
 	// console.log("success clear");
 	colored.style.backgroundColor = "#ffffff";
+	console.log("7")
+
 	colored.style.color = "#000000";
+	console.log("8")
+
 	// banner.style.backgroundColor = "#ffffff";
 	// banner.style.color = "#000000";
 	banner.innerHTML = "Scanner";
+	console.log("9")
+
 }
 
 let timeout;
@@ -70,7 +84,9 @@ domReady(function () {
 	function onScanSuccess(decodeText, decodeResult) {
 		if (decodeText !== decoded) {
 			success();
+			console.log("5")
 			timeout = setTimeout(successClear, 3000, successClear);
+			console.log("10")
 
 			alert("QR code scanned")
 			// console.log("Scanned");
