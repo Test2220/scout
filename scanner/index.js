@@ -1,6 +1,6 @@
 
 
-let savedResults = JSON.parse(localStorage.get("Saved-Scanned")) || [];
+let savedResults = JSON.parse(localStorage.getItem("Saved-Scanned")) || [];
 // console.log(savedResults);
 
 //localStorage.removeItem("Saved-Scanned")
