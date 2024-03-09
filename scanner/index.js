@@ -42,6 +42,10 @@ const banner = document.getElementById("success-banner")
 // Colored is the qr scanner div
 
 function success() {
+
+	const colored = document.getElementById('qr-div')
+const banner = document.getElementById("success-banner")
+
 	console.log(colored)
 	console.log(banner)
 	// console.log("success");
