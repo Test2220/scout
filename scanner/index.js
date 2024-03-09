@@ -5,7 +5,6 @@ let savedResults = JSON.parse(localStorage.getItem("Saved-Scanned")) || [];
 
 //localStorage.removeItem("Saved-Scanned")
 try {
-	startTable()
 
 	for (i = 0; i < savedResults.length; i++) {
 		let pushed = [];
@@ -69,6 +68,7 @@ domReady(function () {
 
 	// If found you qr code
 	function onScanSuccess(decodeText, decodeResult) {
+		alert('Scanned qr code')
 		if (decodeText !== decoded) {
 			success();
 			timeout = setTimeout(successClear, 3000, successClear);
@@ -86,7 +86,7 @@ domReady(function () {
 				newData.push(value);
 			}
 
-			addToTable(newData);
+			// addToTable(newData);
 
 			savedResults.push(decodeText);
 			localStorage.setItem("Saved-Scanned", JSON.stringify(savedResults));
