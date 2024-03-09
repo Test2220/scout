@@ -1,6 +1,6 @@
 
 
-let savedResults = JSON.parse(localStorage.getItem("Saved-Scanned")) || [];
+let savedResults = JSON.parse(localStorage.get("Saved-Scanned")) || [];
 // console.log(savedResults);
 
 //localStorage.removeItem("Saved-Scanned")
@@ -69,11 +69,10 @@ domReady(function () {
 	// If found you qr code
 	function onScanSuccess(decodeText, decodeResult) {
 		if (decodeText !== decoded) {
-			alert('Qr code scanned')
 			success();
 			timeout = setTimeout(successClear, 3000, successClear);
 
-			//alert("QR code scanned")
+			alert("QR code scanned")
 			// console.log("Scanned");
 			decoded = decodeText;
 
