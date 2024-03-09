@@ -230,7 +230,7 @@ function generateTable(data) {
 }
 
 function ClearData() {
-	localStorage.removeItemItem("Saved-Scanned")
+	localStorage.removeItem("Saved-Scanned")
 }
 
 document.getElementById("ClearData").addEventListener('click', ClearData)
