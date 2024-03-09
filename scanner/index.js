@@ -35,7 +35,7 @@ function domReady(fn) {
 // These let the user know when a code has been scanned
 
 
-const colored = document.getElementById("qr-div");
+const colored = document.getElementById('qr-div')
 const banner = document.getElementById("success-banner")
 
 // Banner is the header
@@ -43,6 +43,7 @@ const banner = document.getElementById("success-banner")
 
 function success() {
 	console.log(colored)
+	console.log(banner)
 	// console.log("success");
 	colored.style.backgroundColor = "#35d967";
 	console.log("2")
