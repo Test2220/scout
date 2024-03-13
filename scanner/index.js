@@ -14,7 +14,7 @@ try {
 			// console.log(value);
 		}
 		// console.log(pushed)
-		addToTable(pushed);
+		// addToTable(pushed);
 	}
 } catch {}
 
