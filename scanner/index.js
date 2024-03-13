@@ -129,42 +129,42 @@ function arrayToCsv(data) {
 		.join("\r\n"); // rows starting on new lines
 }
 
-function startTable() {
-	// console.log("starting table");
+// function startTable() {
+// 	// console.log("starting table");
 
-	let keys = [
-		"match",
-		"scouter initials",
-		"team",
-		"human player at amp",
-		"starting position",
-		"auto speaker notes scored",
-		"auto amp notes scored",
-		"left starting area",
-		"teleop speaker notes scored",
-		"teleop amp notes scored",
-		"note pickup location",
-		"coopertition",
-		"trap note scored",
-		"end position",
-		"contributed to harmony",
-		"high note",
-		"yellow card",
-		"red card",
-		"offense skill",
-		"defense skill",
-		"total fouls",
-		"died",
-		"tipped over",
-		"additional notes",
-	];
+// 	let keys = [
+// 		"match",
+// 		"scouter initials",
+// 		"team",
+// 		"human player at amp",
+// 		"starting position",
+// 		"auto speaker notes scored",
+// 		"auto amp notes scored",
+// 		"left starting area",
+// 		"teleop speaker notes scored",
+// 		"teleop amp notes scored",
+// 		"note pickup location",
+// 		"coopertition",
+// 		"trap note scored",
+// 		"end position",
+// 		"contributed to harmony",
+// 		"high note",
+// 		"yellow card",
+// 		"red card",
+// 		"offense skill",
+// 		"defense skill",
+// 		"total fouls",
+// 		"died",
+// 		"tipped over",
+// 		"additional notes",
+// 	];
 
-	generateTable(keys);
-}
+// 	generateTable(keys);
+// }
 
-function addToTable(newData) {
-	generateTable(newData);
-}
+// function addToTable(newData) {
+// 	generateTable(newData);
+// }
 
 function Export() {
 	let data = JSON.parse(localStorage.getItem("Saved-Scanned"));
@@ -201,36 +201,36 @@ function Export() {
 
 document.getElementById("Export").addEventListener("click", Export);
 
-function generateTable(data) {
-	// console.log("Generated table");
-	// creates a <table> element and a <tbody> element
-	const tbl = document.getElementById("table");
-	const tblBody = document.getElementById("table-body");
+// function generateTable(data) {
+// 	console.log("Generated table");
+// 	//  creates a <table> element and a <tbody> element
+// 	const tbl = document.getElementById("table");
+// 	const tblBody = document.getElementById("table-body");
 
-	// creating all cells
-	// creates a table row
-	const row = document.createElement("tr");
+// 	// creating all cells
+// 	// creates a table row
+// 	const row = document.createElement("tr");
 
-	for (let j = 0; j < data.length; j++) {
-		// Create a <td> element and a text node, make the text
-		// node the contents of the <td>, and put the <td> at
-		// the end of the table row
-		const cell = document.createElement("td");
-		const cellText = document.createTextNode(data[j]);
-		cell.appendChild(cellText);
-		row.appendChild(cell);
-	}
+// 	for (let j = 0; j < data.length; j++) {
+// 		// Create a <td> element and a text node, make the text
+// 		// node the contents of the <td>, and put the <td> at
+// 		// the end of the table row
+// 		const cell = document.createElement("td");
+// 		const cellText = document.createTextNode(data[j]);
+// 		cell.appendChild(cellText);
+// 		row.appendChild(cell);
+// 	}
 
-	// add the row to the end of the table body
-	tblBody.appendChild(row);
+// 	// add the row to the end of the table body
+// 	tblBody.appendChild(row);
 
-	// put the <tbody> in the <table>
-	tbl.appendChild(tblBody);
-	// appends <table> into <body>
-	document.body.appendChild(tbl);
-	// sets the border attribute of tbl to '2'
-	tbl.setAttribute("border", "2");
-}
+// 	// put the <tbody> in the <table>
+// 	tbl.appendChild(tblBody);
+// 	// appends <table> into <body>
+// 	document.body.appendChild(tbl);
+// 	// sets the border attribute of tbl to '2'
+// 	tbl.setAttribute("border", "2");
+// }
 
 function ClearData() {
 	localStorage.removeItem("Saved-Scanned")
