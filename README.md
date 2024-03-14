@@ -1,6 +1,6 @@
 # How to use the scouting site
 
-### As of now, the site is not functional
+### The site is fully functional for online use
 
 This README file will give you a rough understanding as to how the site works and how to use it to gather data.
 
@@ -34,7 +34,9 @@ When you scan a qr code, the outside of the scanner will flash green, letting yo
 
 When you scan qr codes, the results are saved locally on your device. You can export the results as a csv using the export button at the bottom of the page, and you can clear local storage using the clear data button. 
 
-After that, it is up to you as to how you use your scouting results. For us at Team 2220, we set up an Activepieces flow where we can upload a csv to a dedicated channel in slack, and the csv will be taken and have all of it's data put into a google sheet for viewing.
+After that, it is up to you as to how you use your scouting results. 
+
+For us at Team 2220, we set up an Activepieces flow where we can upload a csv to a dedicated channel in slack, and the csv will be taken and have all of it's data put into a google sheet for viewing.
 
 ---
 The guide linked below helped us create the client to create QR codes.
