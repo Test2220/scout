@@ -54,8 +54,14 @@
                         
                     </div>
                     <div>
-                        <h2>Human player at amp (yes/no)</h2>
-                        <input placeholder="..." id="humanPlayerAtAmp"></input>
+                        <<h2>Human</h2>
+                        <label for="yellowCard">Yellow card</label>
+    
+                        <select name="notePickupLocation" id="yellowCard">
+                            <option value="Select yes/no" selected>Select yes/no</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">no</option>
+                        </select>
                     </div>
                 </div>
             </div>
@@ -66,7 +72,14 @@
                 <div class="section">
                     <div>
                         <h2>Starting position</h2>
-                        <input placeholder="..." id="startingPosition"></input>
+                        <label for="startingPosition">Starting position</label>
+    
+                        <select name="startingPosition" id="startingPosition">
+                            <option value="Select" selected>Select</option>
+                            <option value="In front of speaker">In front of speaker</option>
+                            <option value="On amp side">On side of amp</option>
+                            <option value="On source side">On side of source</option>
+                        </select>
                     </div>
                     <div>
                         <h2>Speaker notes scored</h2>
@@ -83,8 +96,14 @@
                         </div>
                         <div>
                             <div>
-                                <h2>Left starting area (yes/no)</h2>
-                            <input placeholder="..." id="leftStartingArea"></input>
+                                <h2>Left starting area</h2>
+                                <label for="leftStartingArea">Left starting area</label>
+            
+                                <select name="leftStartingArea" id="leftStartingArea">
+                                    <option value="Select yes/no" selected>Select yes/no</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">no</option>
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -116,22 +135,22 @@
                         <option value="source">Source</option>
                         <option value="ground & source">ground & source</option>
                     </select>
-                    <div>
-                        <div>
-                            <h2>Coopertition (yes/no)</h2>
-                            <input placeholder="..." id="coopertition"></input>
-                        </div>
-                    </div>
                 </div>
             </div>
 
             <div>
                 <button type="button" class="collapsible">Endgame ▼</button>
                 <div class="section">
-                    <div>
-                        <h2>Trap note scored (yes/no)</h2>
-                            <input placeholder="..." id="trapNoteScored"></input>
-                    </div>
+                    <h2>Trap note scored</h2>
+                    <label for="trapNoteScored">Trap note scored</label>
+
+                    <select name="trapNoteScored" id="trapNoteScored">
+                        <option value="Select 0,1,2,3" selected>Select 0,1,2,3</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
                     <h2>End Position</h2>
                     <label for="endPosition">End Position</label>
 
@@ -143,13 +162,27 @@
                         <option value="spotlit">Spotlit</option>
                     </select>
                     <div>
-                        <h2>Contributed to harmony (yes/no)</h2>
-                        <input placeholder="..." id="contributedToHarmony"></input>
+                        <h2>Contributed to harmony</h2>
+                                <label for="contributedToHarmony">Contributed to harmony</label>
+            
+                                <select name="contributedToHarmony" id="contributedToHarmony">
+                                    <option value="Select yes/no" selected>Select yes/no</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">no</option>
+                                </select>
                     </div>
 
                     <div>
-                        <h2>High note scored on mic (yes/no)</h2>
-                        <input placeholder="..." id="highNote"></input>
+                        <h2>High note scored on mic</h2>
+                        <label for="highNote">High note scored on mic</label>
+    
+                        <select name="highNote" id="highNote">
+                            <option value="Select 0,1,2,3" selected>Select 0,1,2,3</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
                     </div>
                 </div>
             </div>
@@ -157,16 +190,24 @@
                 <button type="button" class="collapsible">Postmatch ▼</button>
                 <div class="section">
                     <div>
-                        <div>
-                            <h2>Yellow card (yes/no)</h2>
-                            <input placeholder="..." id="yellowCard"></input>
-                        </div>
+                        <h2>Yellow card</h2>
+                        <label for="yellowCard">Yellow card</label>
+    
+                        <select name="notePickupLocation" id="yellowCard">
+                            <option value="Select yes/no" selected>Select yes/no</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">no</option>
+                        </select>
                     </div>
                     <div>
-                        <div>
-                            <h2>Red card (yes/no)</h2>
-                            <input placeholder="..." id="redCard"></input>
-                        </div>
+                        <h2>Red card</h2>
+                        <label for="redCard">Yellow card</label>
+    
+                        <select name="redCard" id="redCard">
+                            <option value="Select yes/no" selected>Select yes/no</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">no</option>
+                        </select>
                     </div>
                     <h2>Offense skill</h2>
                     <label for="offenseSkill">Offense skill</label>
@@ -187,22 +228,26 @@
                         <option value="good">Good</option>
                     </select>
                     <div>
-                        <h2>Amount of fouls</h2>
-                        <button id="minus" name="amountOfFouls">-</button>
-                        <input placeholder="0" id="amountOfFouls"></input>
-                        <button id="plus" name="amountOfFouls">+</button>
-                    </div>
-                    <div>
                         <div>
-                            <h2>Died/disconnected (yes/no)</h2>
-                            <input placeholder="..." id="died"></input>
+                            <h2>Died or disconnected</h2>
+                        <label for="died">Died or disconnected</label>
+    
+                        <select name="died" id="died">
+                            <option value="Select yes/no" selected>Select yes/no</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">no</option>
+                        </select>
                         </div>
                     </div>
                     <div>
-                        <div>
-                            <h2>Tipped over (yes/no)</h2>
-                            <input placeholder="..." id="tippedOver"></input>
-                        </div>
+                        <h2>Tipped over</h2>
+                        <label for="tippedOver">Tipped over</label>
+    
+                        <select name="tippedOver" id="tippedOver">
+                            <option value="Select yes/no" selected>Select yes/no</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">no</option>
+                        </select>
 
                     </div>
                 </div>
