@@ -35,7 +35,7 @@ function domReady(fn) {
 // These let the user know when a code has been scanned
 
 
-const colored = document.getElementById('qr-div')
+const colored = document.getElementById('qr-section')
 const banner = document.getElementById("success-banner")
 
 // Banner is the header
