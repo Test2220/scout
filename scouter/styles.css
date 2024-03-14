@@ -17,6 +17,17 @@ button {
   color: rgb(255, 255, 255);
 }
 
+select {
+  border-radius: 10px;
+  scale: 1.5;
+  background-color: rgb(0, 106, 255);
+  color: white;
+}
+
+label {
+  padding-right: 40px;
+}
+
 canvas {
   margin-bottom: 1.5rem;
   padding: 0.25em 1em;
