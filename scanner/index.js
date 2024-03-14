@@ -74,7 +74,7 @@ domReady(function () {
 	function onScanSuccess(decodeText, decodeResult) {
 		if (decodeText !== decoded) {
 			success();
-			timeout = setTimeout(successClear, 3000, successClear);
+			timeout = setTimeout(successClear, 1500, successClear);
 
 			//alert("QR code scanned")
 			// console.log("Scanned");
