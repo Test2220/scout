@@ -2,6 +2,13 @@
 
 ### The site is fully functional for online use
 
+## To do
+- [ ] Smaller qr codes, optimizing the JSON or using arrays instead
+- [ ] More reliable scanning, some qr codes would be scanned and give random 8-12 digit numbers instead of the data on the qr code
+- [ ] Export as pure JSON button and function. If a qr code was mis-scanned and gave a random 8-12 digit number, the export button would break. The export JSON button would be a backup solution.
+- [ ] Documentation on Activepieces connection between google drive and google sheets
+- [ ] Guide for how to set up the scouting site on your own repository and vercel site
+
 This README file will give you a rough understanding as to how the site works and how to use it to gather data.
 
 There are 2 pages in the scouting site that are used for gathering and reading data.
@@ -31,6 +38,8 @@ After you scout a match, generate a qr code at the bottom of the page, and after
 The scanner page as a qr code scanner on it, and you need to allow camera permissions for it to work.
 
 When you scan a qr code, the outside of the scanner will flash green, letting you know a qr code has been scanned. The qr codes that are generated have a lot of information on them, so they will be relatively large. You will need to make the qr code as big as you can, and try to get it as close to the camera as you can. 
+
+In our experience, we found that our phones are not great at scanning qr codes, so we used laptops, but we also had issues with that, as only one of us was able to scan qr codes with our laptop.
 
 When you scan qr codes, the results are saved locally on your device. You can export the results as a csv using the export button at the bottom of the page, and you can clear local storage using the clear data button. 
 
