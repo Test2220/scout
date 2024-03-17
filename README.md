@@ -9,6 +9,7 @@
 - [ ] Documentation on Activepieces connection between google drive and google sheets
 - [ ] Guide for how to set up the scouting site on your own repository and vercel site
 - [ ] Updated README.md (this document) with images and diagrams to understand the site easier
+- [ ] Functional check boxes
 
 This README file will give you a rough understanding as to how the site works and how to use it to gather data.
 
