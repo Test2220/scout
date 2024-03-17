@@ -5,9 +5,10 @@
 ## To do
 - [ ] Smaller qr codes, optimizing the JSON or using arrays instead
 - [ ] More reliable scanning, some qr codes would be scanned and give random 8-12 digit numbers instead of the data on the qr code
-- [ ] Export as pure JSON button and function. If a qr code was mis-scanned and gave a random 8-12 digit number, the export button would break. The export JSON button would be a backup solution.
+- [ ] Export as pure JSON button and function. If a qr code was mis-scanned and gave a random 8-12 digit number, the export button would break. The export JSON button would be a backup solution
 - [ ] Documentation on Activepieces connection between google drive and google sheets
 - [ ] Guide for how to set up the scouting site on your own repository and vercel site
+- [ ] Updated README.md (this document) with images and diagrams to understand the site easier
 
 This README file will give you a rough understanding as to how the site works and how to use it to gather data.
 
